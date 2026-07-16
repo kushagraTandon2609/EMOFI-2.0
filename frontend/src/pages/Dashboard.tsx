@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Music4, User } from "lucide-react";
-
+import RecommendationCard from "../components/dashboard/RecommendationCard";
 import WebcamCard from "../components/dashboard/WebcamCard";
 import EmotionCard from "../components/dashboard/EmotionCard";
 
@@ -8,15 +8,30 @@ export default function Dashboard() {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
 
   const [emotion, setEmotion] = useState("Waiting...");
-  const [confidence, setConfidence] = useState(0);
+const [confidence, setConfidence] = useState(0);
 
-  const handlePrediction = (
-    emotion: string,
-    confidence: number
-  ) => {
-    setEmotion(emotion);
-    setConfidence(confidence);
-  };
+const [songs, setSongs] = useState<
+  {
+    title: string;
+    artist: string;
+    youtube: string;
+  }[]
+>([]);
+  const handlePrediction = (prediction: {
+  emotion: string;
+  confidence: number;
+  songs: {
+    title: string;
+    artist: string;
+    youtube: string;
+  }[];
+}) => {
+
+  setEmotion(prediction.emotion);
+  setConfidence(prediction.confidence);
+  setSongs(prediction.songs);
+
+};
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -59,33 +74,9 @@ export default function Dashboard() {
         />
 
         {/* Music */}
-        <div className="rounded-3xl bg-white p-8 shadow">
-
-          <div className="mb-5 flex items-center gap-3">
-            <Music4 className="text-violet-600" />
-
-            <h2 className="text-2xl font-bold">
-              Recommendations
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-
-            <div className="rounded-xl bg-violet-50 p-4">
-              🎵 Perfect
-            </div>
-
-            <div className="rounded-xl bg-violet-50 p-4">
-              🎵 Blinding Lights
-            </div>
-
-            <div className="rounded-xl bg-violet-50 p-4">
-              🎵 Believer
-            </div>
-
-          </div>
-
-        </div>
+        <RecommendationCard
+  songs={songs}
+/>
 
       </div>
     </div>

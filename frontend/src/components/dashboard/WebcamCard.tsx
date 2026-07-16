@@ -1,11 +1,20 @@
 import Webcam from "react-webcam";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Camera } from "lucide-react";
-import { Button } from "../ui/button";
 import { detectEmotion } from "../../services/emotion";
 
+interface Prediction {
+  emotion: string;
+  confidence: number;
+  songs: {
+    title: string;
+    artist: string;
+    youtube: string;
+  }[];
+}
+
 interface WebcamCardProps {
-  onPrediction: (emotion: string, confidence: number) => void;
+  onPrediction: (prediction: Prediction) => void;
 }
 
 export default function WebcamCard({
@@ -16,53 +25,46 @@ export default function WebcamCard({
   const capture = async () => {
     const image = webcamRef.current?.getScreenshot();
 
-    if (!image) {
-      alert("Unable to capture image.");
-      return;
-    }
+    if (!image) return;
 
     try {
       const response = await detectEmotion(image);
 
-      if (!response.success) {
-        alert(response.message);
-        return;
+      if (response.success) {
+        onPrediction(response);
       }
-
-      onPrediction(
-        response.emotion,
-        response.confidence
-      );
-
     } catch (error) {
       console.error(error);
-      alert("Server Error");
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      capture();
+    }, 2000); // Every 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="rounded-3xl bg-white p-8 shadow">
 
       <div className="mb-5 flex items-center gap-3">
         <Camera className="text-violet-600" />
-
         <h2 className="text-2xl font-bold">
-          Emotion Detection
+          Live Emotion Detection
         </h2>
       </div>
 
       <Webcam
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        className="rounded-2xl w-full"
+        className="w-full rounded-2xl"
       />
 
-      <Button
-        className="mt-6 w-full"
-        onClick={capture}
-      >
-        Capture Image
-      </Button>
+      <p className="mt-5 text-center text-sm text-gray-500">
+        Detecting emotion every 2 seconds...
+      </p>
 
     </div>
   );

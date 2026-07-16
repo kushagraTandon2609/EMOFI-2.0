@@ -1,0 +1,73 @@
+{
+  "happy": [
+    {
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "youtube": "https://www.youtube.com/results?search_query=Blinding+Lights"
+    },
+    {
+      "title": "Perfect",
+      "artist": "Ed Sheeran",
+      "youtube": "https://www.youtube.com/results?search_query=Perfect+Ed+Sheeran"
+    },
+    {
+      "title": "Levitating",
+      "artist": "Dua Lipa",
+      "youtube": "https://www.youtube.com/results?search_query=Levitating"
+    }
+  ],
+
+  "sad": [
+    {
+      "title": "Someone Like You",
+      "artist": "Adele",
+      "youtube": "https://www.youtube.com/results?search_query=Someone+Like+You"
+    },
+    {
+      "title": "Fix You",
+      "artist": "Coldplay",
+      "youtube": "https://www.youtube.com/results?search_query=Fix+You"
+    },
+    {
+      "title": "Let Her Go",
+      "artist": "Passenger",
+      "youtube": "https://www.youtube.com/results?search_query=Let+Her+Go"
+    }
+  ],
+
+  "angry": [
+    {
+      "title": "Believer",
+      "artist": "Imagine Dragons",
+      "youtube": "https://www.youtube.com/results?search_query=Believer"
+    },
+    {
+      "title": "Numb",
+      "artist": "Linkin Park",
+      "youtube": "https://www.youtube.com/results?search_query=Numb"
+    },
+    {
+      "title": "Enemy",
+      "artist": "Imagine Dragons",
+      "youtube": "https://www.youtube.com/results?search_query=Enemy"
+    }
+  ],
+
+  "surprise": [
+    {
+      "title": "On Top Of The World",
+      "artist": "Imagine Dragons",
+      "youtube": "https://www.youtube.com/results?search_query=On+Top+Of+The+World"
+    },
+    {
+      "title": "Counting Stars",
+      "artist": "OneRepublic",
+      "youtube": "https://www.youtube.com/results?search_query=Counting+Stars"
+    },
+    {
+      "title": "Adventure Of A Lifetime",
+      "artist": "Coldplay",
+      "youtube": "https://www.youtube.com/results?search_query=Adventure+Of+A+Lifetime"
+    }
+  ]
+}
