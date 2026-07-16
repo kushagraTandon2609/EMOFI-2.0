@@ -1,8 +1,44 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "../components/common/Input";
 import { Button } from "../components/ui/button";
+import { loginUser } from "../services/auth";
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await loginUser({
+        email: formData.email,
+        password: formData.password,
+      });
+
+      localStorage.setItem("token", response.token);
+      localStorage.setItem("user", JSON.stringify(response.user));
+
+      alert("Login Successful!");
+
+      navigate("/dashboard");
+    } catch (error: any) {
+      alert(error.response?.data?.message || "Login Failed");
+    }
+  };
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-violet-50 via-white to-pink-50 px-6">
 
@@ -16,7 +52,7 @@ export default function Login() {
           Login to continue using EMOFI.
         </p>
 
-        <form className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5">
 
           <div>
             <label className="mb-2 block font-medium">
@@ -25,7 +61,11 @@ export default function Login() {
 
             <Input
               type="email"
+              name="email"
               placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
           </div>
 
@@ -36,11 +76,16 @@ export default function Login() {
 
             <Input
               type="password"
+              name="password"
               placeholder="Enter your password"
+              value={formData.password}
+              onChange={handleChange}
+              required
             />
           </div>
 
           <Button
+            type="submit"
             className="w-full"
             size="lg"
           >

@@ -1,8 +1,49 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "../components/common/Input";
 import { Button } from "../components/ui/button";
+import { registerUser } from "../services/auth";
 
 export default function Register() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    try {
+      const response = await registerUser({
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+      });
+
+      alert(response.message);
+
+      navigate("/login");
+    } catch (error: any) {
+      alert(error.response?.data?.message || "Registration Failed");
+    }
+  };
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-violet-50 via-white to-pink-50 px-6">
 
@@ -16,7 +57,7 @@ export default function Register() {
           Join EMOFI today.
         </p>
 
-        <form className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5">
 
           <div>
             <label className="mb-2 block font-medium">
@@ -25,7 +66,11 @@ export default function Register() {
 
             <Input
               type="text"
-              placeholder="Your name"
+              name="name"
+              placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleChange}
+              required
             />
           </div>
 
@@ -36,7 +81,11 @@ export default function Register() {
 
             <Input
               type="email"
-              placeholder="Enter email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
           </div>
 
@@ -47,7 +96,11 @@ export default function Register() {
 
             <Input
               type="password"
+              name="password"
               placeholder="Create password"
+              value={formData.password}
+              onChange={handleChange}
+              required
             />
           </div>
 
@@ -58,11 +111,16 @@ export default function Register() {
 
             <Input
               type="password"
+              name="confirmPassword"
               placeholder="Confirm password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
             />
           </div>
 
           <Button
+            type="submit"
             className="w-full"
             size="lg"
           >

@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
-
+from routes.emotion import emotion
 from config import Config
 from extensions import db, bcrypt, jwt
-
+from ai.model_loader import model, labels
 from routes.auth import auth
 
 app = Flask(__name__)
@@ -19,7 +19,7 @@ jwt.init_app(app)
 
 # Register routes
 app.register_blueprint(auth, url_prefix="/api")
-
+app.register_blueprint(emotion, url_prefix="/api")
 # Create database tables
 with app.app_context():
     db.create_all()
