@@ -1,5 +1,8 @@
 from flask import Blueprint, request, jsonify
+from flask_jwt_extended import jwt_required, get_jwt_identity
+
 from services.recommendation_service import recommendation_service
+from services.history_service import history_service
 
 import base64
 import cv2
@@ -11,6 +14,7 @@ emotion = Blueprint("emotion", __name__)
 
 
 @emotion.route("/detect", methods=["POST"])
+@jwt_required()
 def detect():
 
     data = request.get_json()
@@ -43,6 +47,16 @@ def detect():
                 "success": False,
                 "message": "No face detected."
             }), 400
+
+        # Logged in user
+        user_id = int(get_jwt_identity())
+
+        # Save prediction to history
+        history_service.save(
+            user_id=user_id,
+            emotion=result["emotion"],
+            confidence=result["confidence"]
+        )
 
         # Get song recommendations
         recommendations = recommendation_service.recommend(
