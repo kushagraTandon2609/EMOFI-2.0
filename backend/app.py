@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-
+from routes.analytics import analytics
 from config import Config
 from extensions import db, bcrypt, jwt
 
@@ -26,6 +26,11 @@ CORS(app)
 db.init_app(app)
 bcrypt.init_app(app)
 jwt.init_app(app)
+
+app.register_blueprint(
+    analytics,
+    url_prefix="/api/analytics"
+)
 
 # Register blueprints
 app.register_blueprint(auth, url_prefix="/api")

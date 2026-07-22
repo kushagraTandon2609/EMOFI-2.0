@@ -9,7 +9,7 @@ from services.analytics_service import analytics_service
 analytics = Blueprint("analytics", __name__)
 
 
-@analytics.route("/", methods=["GET"])
+@analytics.route("", methods=["GET"])
 @jwt_required()
 def get_analytics():
 

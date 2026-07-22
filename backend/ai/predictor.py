@@ -7,10 +7,11 @@ from ai.mediapipe_detector import extract_features
 def predict_emotion(image):
 
     features = extract_features(image)
-    print("Feature Shape:", features.shape)
-    
+
     if features is None:
         return None
+
+    print("Feature Shape:", features.shape)
 
     prediction = model.predict(features, verbose=0)
 

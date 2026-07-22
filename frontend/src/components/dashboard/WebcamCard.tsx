@@ -22,35 +22,42 @@ export default function WebcamCard({
 }: WebcamCardProps) {
   const webcamRef = useRef<Webcam>(null);
 
-  const capture = async () => {
-    const image = webcamRef.current?.getScreenshot();
-
-    if (!image) return;
-
-    try {
-      const response = await detectEmotion(image);
-
-      if (response.success) {
-        onPrediction(response);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      capture();
-    }, 2000); // Every 2 seconds
+    let cancelled = false;
 
-    return () => clearInterval(interval);
-  }, []);
+    const detectLoop = async () => {
+      while (!cancelled) {
+        const image = webcamRef.current?.getScreenshot();
+
+        if (image) {
+          try {
+            const response = await detectEmotion(image);
+
+            if (!cancelled && response.success) {
+              onPrediction(response);
+            }
+          } catch (error) {
+            console.error(error);
+          }
+        }
+
+        // Wait 2 seconds before the next detection
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      }
+    };
+
+    detectLoop();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [onPrediction]);
 
   return (
     <div className="rounded-3xl bg-white p-8 shadow">
-
       <div className="mb-5 flex items-center gap-3">
         <Camera className="text-violet-600" />
+
         <h2 className="text-2xl font-bold">
           Live Emotion Detection
         </h2>
@@ -65,7 +72,6 @@ export default function WebcamCard({
       <p className="mt-5 text-center text-sm text-gray-500">
         Detecting emotion every 2 seconds...
       </p>
-
     </div>
   );
 }

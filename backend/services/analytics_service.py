@@ -27,15 +27,19 @@ class AnalyticsService:
 
         most_common = counter.most_common(1)[0][0]
 
-        last_detection = max(
+        last = max(
             history,
             key=lambda x: x.created_at
-        ).created_at.isoformat()
+        )
 
         return {
             "total": total,
             "most_common": most_common,
-            "last_detection": last_detection,
+            "last_detection": {
+                "emotion": last.emotion,
+                "confidence": last.confidence,
+                "created_at": last.created_at.isoformat()
+            },
             "distribution": dict(counter)
         }
 

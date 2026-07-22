@@ -6,6 +6,7 @@ import Register from "@/pages/Register";
 import Dashboard from "@/pages/Dashboard";
 import History from "@/pages/History";
 import NotFound from "@/pages/NotFound";
+import Analytics from "@/pages/Analytics";
 
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
@@ -34,6 +35,15 @@ function AppRoutes() {
             </ProtectedRoute>
           }
         />
+
+        <Route
+    path="/analytics"
+    element={
+        <ProtectedRoute>
+            <Analytics />
+        </ProtectedRoute>
+    }
+/>
 
         <Route path="*" element={<NotFound />} />
       </Routes>

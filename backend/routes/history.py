@@ -6,7 +6,7 @@ from services.history_service import history_service
 history = Blueprint("history", __name__)
 
 
-@history.route("/", methods=["GET"])
+@history.route("", methods=["GET"])
 @jwt_required()
 def get_history():
 

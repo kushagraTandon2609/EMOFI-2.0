@@ -24,6 +24,10 @@ export default function DashboardNavbar() {
           <Button variant="outline">History</Button>
         </Link>
 
+        <Link to="/analytics">
+    <Button variant="outline">Analytics</Button>
+</Link>
+
         <Button
           variant="destructive"
           onClick={logout}
