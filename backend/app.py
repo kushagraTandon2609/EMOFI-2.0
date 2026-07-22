@@ -3,6 +3,7 @@ from flask_cors import CORS
 from routes.analytics import analytics
 from config import Config
 from extensions import db, bcrypt, jwt
+from routes.profile import profile
 
 # Load AI model on startup
 from ai.model_loader import model, labels
@@ -30,6 +31,11 @@ jwt.init_app(app)
 app.register_blueprint(
     analytics,
     url_prefix="/api/analytics"
+)
+
+app.register_blueprint(
+    profile,
+    url_prefix="/api/profile"
 )
 
 # Register blueprints

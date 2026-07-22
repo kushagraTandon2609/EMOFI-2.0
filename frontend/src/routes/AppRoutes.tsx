@@ -7,6 +7,7 @@ import Dashboard from "@/pages/Dashboard";
 import History from "@/pages/History";
 import NotFound from "@/pages/NotFound";
 import Analytics from "@/pages/Analytics";
+import Profile from "@/pages/Profile";
 
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
@@ -43,6 +44,14 @@ function AppRoutes() {
             <Analytics />
         </ProtectedRoute>
     }
+/>
+<Route
+  path="/profile"
+  element={
+    <ProtectedRoute>
+      <Profile />
+    </ProtectedRoute>
+  }
 />
 
         <Route path="*" element={<NotFound />} />

@@ -27,6 +27,9 @@ export default function DashboardNavbar() {
         <Link to="/analytics">
     <Button variant="outline">Analytics</Button>
 </Link>
+<Link to="/profile">
+    <Button variant="outline">Profile</Button>
+</Link>
 
         <Button
           variant="destructive"
