@@ -28,5 +28,30 @@ class HistoryService:
 
         return [item.to_dict() for item in history]
 
+    def delete_history(self, history_id, user_id):
+
+        history = MoodHistory.query.filter_by(
+            id=history_id,
+            user_id=user_id
+        ).first()
+
+        if not history:
+            return False
+
+        db.session.delete(history)
+        db.session.commit()
+
+        return True
+
+    def delete_all_history(self, user_id):
+
+        MoodHistory.query.filter_by(
+            user_id=user_id
+        ).delete()
+
+        db.session.commit()
+
+        return True
+
 
 history_service = HistoryService()
