@@ -1,92 +1,109 @@
-import { Button } from "../ui/button";
-import { Music4, BrainCircuit, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowRight, BrainCircuit, Music4, Sparkles } from "lucide-react";
+import { Button } from "../ui/button";
+
+const floating = {
+  animate: {
+    y: [0, -12, 0],
+    transition: {
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
 
 export default function Hero() {
   return (
-    <section className="overflow-hidden bg-gradient-to-br from-violet-50 via-white to-pink-50">
-      <div className="mx-auto flex min-h-[90vh] max-w-7xl flex-col-reverse items-center justify-center gap-14 px-6 py-16 sm:px-8 md:py-20 lg:flex-row lg:gap-20 lg:px-10">
+    <section className="relative overflow-hidden bg-[#050816] text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#7c3aed33,transparent_35%),radial-gradient(circle_at_bottom_left,#2563eb22,transparent_35%)]" />
+      <div className="absolute inset-0 opacity-20">
+        <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      </div>
 
-        {/* Left Section */}
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-16 px-6 py-20 lg:flex-row">
         <motion.div
-          className="flex-1 text-center lg:text-left"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{opacity:0,x:-40}}
+          animate={{opacity:1,x:0}}
+          transition={{duration:.7}}
+          className="max-w-xl"
         >
-          <div className="mb-6 inline-flex items-center rounded-full border border-violet-200 bg-white px-4 py-2 text-sm shadow-sm">
-            <Sparkles className="mr-2 h-4 w-4 text-violet-600" />
-            AI Powered Emotion Recognition
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-white/10 px-4 py-2 backdrop-blur-xl">
+            <Sparkles className="h-4 w-4 text-violet-400"/>
+            AI Powered Emotion Intelligence
           </div>
 
-          <h1 className="mb-6 text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl">
-            Emotion <span className="text-violet-600">Meets</span> Music
+          <h1 className="text-5xl font-black leading-tight md:text-7xl">
+            Understand Your
+            <span className="block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+              Emotions.
+            </span>
           </h1>
 
-          <p className="mx-auto mb-10 max-w-xl text-base leading-8 text-gray-600 sm:text-lg lg:mx-0">
-            Detect your emotions in real-time using Artificial Intelligence and
-            instantly receive personalized music recommendations that perfectly
-            match your mood.
+          <p className="mt-8 text-lg text-slate-300">
+            Detect emotions using AI, analyze facial expressions in real time,
+            and receive personalized music recommendations instantly.
           </p>
 
-          <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-            <Button size="lg" className="w-full sm:w-auto">
-              Start Detecting
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Button size="lg" className="rounded-2xl">
+              Start Detecting <ArrowRight className="ml-2 h-4 w-4"/>
             </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
+            <Button variant="outline" size="lg" className="rounded-2xl border-white/20 bg-white/5 text-white hover:bg-white/10">
               View GitHub
             </Button>
           </div>
         </motion.div>
 
-        {/* Right Section */}
         <motion.div
-          className="flex flex-1 items-center justify-center"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{opacity:0,x:40}}
+          animate={{opacity:1,x:0}}
+          transition={{duration:.7}}
+          className="relative flex h-[500px] w-full max-w-lg items-center justify-center"
         >
-          <div className="relative h-[320px] w-full max-w-[420px] rounded-3xl bg-white p-6 shadow-2xl sm:h-[420px] sm:p-8">
+          <motion.div
+            {...floating}
+            className="absolute h-72 w-72 rounded-full bg-violet-600/20 blur-3xl"
+          />
 
-            {/* Floating Emotion Card */}
-            <div className="absolute left-2 top-6 flex items-center gap-3 rounded-xl bg-white p-3 shadow-lg sm:-left-8 sm:top-10 sm:p-4">
-              <BrainCircuit className="text-violet-600" />
+          <motion.div
+            {...floating}
+            className="relative flex h-80 w-80 items-center justify-center rounded-full border border-violet-500/30 bg-white/5 backdrop-blur-3xl"
+          >
+            <div className="absolute h-64 w-64 rounded-full border border-violet-500/20 animate-pulse"/>
+            <div className="absolute h-48 w-48 rounded-full border border-cyan-500/20 animate-pulse"/>
+            <BrainCircuit className="h-28 w-28 text-violet-400"/>
+          </motion.div>
 
+          <motion.div
+            {...floating}
+            transition={{delay:.4,duration:6,repeat:Infinity}}
+            className="absolute left-0 top-12 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl"
+          >
+            <div className="flex items-center gap-3">
+              <BrainCircuit className="text-violet-400"/>
               <div>
                 <p className="font-semibold">Emotion</p>
-                <p className="text-sm text-gray-500">
-                  Happy 😊
-                </p>
+                <p className="text-sm text-slate-300">Happy • 97.8%</p>
               </div>
             </div>
+          </motion.div>
 
-            {/* Floating Music Card */}
-            <div className="absolute bottom-6 right-2 flex items-center gap-3 rounded-xl bg-white p-3 shadow-lg sm:-right-8 sm:bottom-16 sm:p-4">
-              <Music4 className="text-violet-600" />
-
+          <motion.div
+            {...floating}
+            transition={{delay:1,duration:6,repeat:Infinity}}
+            className="absolute bottom-8 right-0 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl"
+          >
+            <div className="flex items-center gap-3">
+              <Music4 className="text-cyan-400"/>
               <div>
-                <p className="font-semibold">Recommendation</p>
-                <p className="text-sm text-gray-500">
-                  3 Songs Ready
-                </p>
+                <p className="font-semibold">Playlist Ready</p>
+                <p className="text-sm text-slate-300">24 AI Picks</p>
               </div>
             </div>
-
-            {/* Main AI Box */}
-            <div className="flex h-full items-center justify-center rounded-2xl border-2 border-dashed border-violet-300 bg-violet-50">
-              <BrainCircuit
-                size={120}
-                className="text-violet-500 sm:h-36 sm:w-36"
-              />
-            </div>
-          </div>
+          </motion.div>
         </motion.div>
-
       </div>
     </section>
   );
