@@ -15,7 +15,7 @@ const floating = {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#050816] text-white">
+    <section className="relative isolate overflow-hidden bg-[#050816] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#7c3aed33,transparent_35%),radial-gradient(circle_at_bottom_left,#2563eb22,transparent_35%)]" />
       <div className="absolute inset-0 opacity-20">
         <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
