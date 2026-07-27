@@ -1,110 +1,194 @@
-import { motion } from "framer-motion";
-import { ArrowRight, BrainCircuit, Music4, Sparkles } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import {
+  ArrowRight,
+  BrainCircuit,
+  Github,
+  Music4,
+  Play,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
+
 import { Button } from "../ui/button";
+
+import AuroraBackground from "../background/AuroraBackground";
+import AIOrb from "./AIOrb";
+import StatsCounter from "./StatsCounter";
+import ScrollIndicator from "./ScrollIndicator";
+
+const container: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
 
 const floating = {
   animate: {
-    y: [0, -12, 0],
+    y: [0, -14, 0],
     transition: {
-      duration: 5,
+      duration: 6,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   },
 };
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#050816] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#7c3aed33,transparent_35%),radial-gradient(circle_at_bottom_left,#2563eb22,transparent_35%)]" />
-      <div className="absolute inset-0 opacity-20">
-        <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
-      </div>
+    <section className="relative isolate flex min-h-screen items-center overflow-hidden text-white">
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-16 px-6 py-20 lg:flex-row">
-        <motion.div
-          initial={{opacity:0,x:-40}}
-          animate={{opacity:1,x:0}}
-          transition={{duration:.7}}
-          className="max-w-xl"
-        >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-white/10 px-4 py-2 backdrop-blur-xl">
-            <Sparkles className="h-4 w-4 text-violet-400"/>
-            AI Powered Emotion Intelligence
-          </div>
+      <AuroraBackground />
 
-          <h1 className="text-5xl font-black leading-tight md:text-7xl">
-            Understand Your
-            <span className="block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-              Emotions.
-            </span>
-          </h1>
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 pt-32 pb-20">
 
-          <p className="mt-8 text-lg text-slate-300">
-            Detect emotions using AI, analyze facial expressions in real time,
-            and receive personalized music recommendations instantly.
-          </p>
+        <div className="grid w-full items-center gap-20 lg:grid-cols-2">
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Button size="lg" className="rounded-2xl">
-              Start Detecting <ArrowRight className="ml-2 h-4 w-4"/>
-            </Button>
-
-            <Button variant="outline" size="lg" className="rounded-2xl border-white/20 bg-white/5 text-white hover:bg-white/10">
-              View GitHub
-            </Button>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{opacity:0,x:40}}
-          animate={{opacity:1,x:0}}
-          transition={{duration:.7}}
-          className="relative flex h-[500px] w-full max-w-lg items-center justify-center"
-        >
-          <motion.div
-            {...floating}
-            className="absolute h-72 w-72 rounded-full bg-violet-600/20 blur-3xl"
-          />
+          {/* LEFT */}
 
           <motion.div
-            {...floating}
-            className="relative flex h-80 w-80 items-center justify-center rounded-full border border-violet-500/30 bg-white/5 backdrop-blur-3xl"
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="max-w-xl"
           >
-            <div className="absolute h-64 w-64 rounded-full border border-violet-500/20 animate-pulse"/>
-            <div className="absolute h-48 w-48 rounded-full border border-cyan-500/20 animate-pulse"/>
-            <BrainCircuit className="h-28 w-28 text-violet-400"/>
+            <motion.div
+              variants={fadeUp}
+              className="mb-8 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-white/10 px-5 py-2 backdrop-blur-xl"
+            >
+              <Sparkles className="h-4 w-4 text-violet-400" />
+
+              <span className="text-sm font-medium tracking-wide">
+                AI Powered Emotion Intelligence
+              </span>
+            </motion.div>
+
+            <motion.h1
+              variants={fadeUp}
+              className="text-5xl font-black leading-[1.05] md:text-7xl"
+            >
+              Understand
+
+              <br />
+
+              Your
+
+              <span className="block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+
+                Emotions
+
+              </span>
+
+              with AI
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              className="mt-8 max-w-lg text-lg leading-8 text-slate-300"
+            >
+              Experience next-generation facial emotion recognition,
+              real-time analytics, intelligent mood tracking,
+              and personalized AI music recommendations,
+              all powered by cutting-edge deep learning.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-10 flex flex-wrap gap-4"
+            >
+              <Button
+                size="lg"
+                className="group rounded-2xl bg-violet-600 px-8 py-7 text-base shadow-[0_0_40px_rgba(139,92,246,.35)] transition-all hover:scale-105 hover:bg-violet-500"
+              >
+                Start Detecting
+
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-2xl border-white/15 bg-white/5 px-8 py-7 text-white backdrop-blur-xl hover:bg-white/10"
+              >
+                <Github className="mr-2 h-5 w-5" />
+
+                View GitHub
+              </Button>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-16 grid grid-cols-3 gap-8"
+            >
+              <StatsCounter
+                value={95}
+                suffix="%"
+                label="Accuracy"
+              />
+
+              <StatsCounter
+                value={50}
+                suffix="K+"
+                label="Predictions"
+              />
+
+              <StatsCounter
+                value={24}
+                suffix="/7"
+                label="Availability"
+              />
+            </motion.div>
           </motion.div>
 
-          <motion.div
-            {...floating}
-            transition={{delay:.4,duration:6,repeat:Infinity}}
-            className="absolute left-0 top-12 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl"
-          >
-            <div className="flex items-center gap-3">
-              <BrainCircuit className="text-violet-400"/>
-              <div>
-                <p className="font-semibold">Emotion</p>
-                <p className="text-sm text-slate-300">Happy • 97.8%</p>
-              </div>
-            </div>
-          </motion.div>
+          {/* RIGHT */}
 
           <motion.div
-            {...floating}
-            transition={{delay:1,duration:6,repeat:Infinity}}
-            className="absolute bottom-8 right-0 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl"
+            initial={{
+              opacity: 0,
+              x: 60,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: .8,
+            }}
+            className="relative flex h-[650px] items-center justify-center"
           >
-            <div className="flex items-center gap-3">
-              <Music4 className="text-cyan-400"/>
-              <div>
-                <p className="font-semibold">Playlist Ready</p>
-                <p className="text-sm text-slate-300">24 AI Picks</p>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
+
+            <motion.div
+              {...floating}
+              className="absolute h-[420px] w-[420px] rounded-full bg-violet-600/20 blur-[120px]"
+            />
+
+            <motion.div
+              {...floating}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+              }}
+              className="absolute h-[280px] w-[280px] rounded-full bg-cyan-500/20 blur-[100px]"
+            />
+
+            <AIOrb />
+
+            

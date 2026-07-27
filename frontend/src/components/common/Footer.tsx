@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail, Heart, ArrowUpRight } from "lucide-react";
+import {
+  Globe,
+  Mail,
+  Heart,
+  ArrowUpRight,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -19,6 +24,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="grid gap-14 lg:grid-cols-[2fr_1fr_1fr]"
         >
+          {/* Left */}
           <div>
             <h2 className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-4xl font-black text-transparent">
               EMOFI
@@ -31,7 +37,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-8 flex gap-4">
-              {[Github, Linkedin, Mail].map((Icon, i) => (
+              {[Globe, Mail].map((Icon, i) => (
                 <motion.a
                   key={i}
                   href="#"
@@ -44,32 +50,44 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Center */}
           <div>
             <h3 className="mb-6 text-xl font-bold">Quick Links</h3>
 
             <div className="space-y-4 text-slate-400">
-              <Link to="/" className="flex items-center gap-2 transition hover:text-white">
+              <Link
+                to="/"
+                className="flex items-center gap-2 transition hover:text-white"
+              >
                 Home <ArrowUpRight size={15} />
               </Link>
 
-              <a href="#features" className="flex items-center gap-2 transition hover:text-white">
+              <a
+                href="#features"
+                className="flex items-center gap-2 transition hover:text-white"
+              >
                 Features <ArrowUpRight size={15} />
               </a>
 
-              <Link to="/login" className="flex items-center gap-2 transition hover:text-white">
+              <Link
+                to="/login"
+                className="flex items-center gap-2 transition hover:text-white"
+              >
                 Login <ArrowUpRight size={15} />
               </Link>
 
-              <Link to="/register" className="flex items-center gap-2 transition hover:text-white">
+              <Link
+                to="/register"
+                className="flex items-center gap-2 transition hover:text-white"
+              >
                 Register <ArrowUpRight size={15} />
               </Link>
             </div>
           </div>
 
+          {/* Right */}
           <div>
-            <h3 className="mb-6 text-xl font-bold">
-              Built With
-            </h3>
+            <h3 className="mb-6 text-xl font-bold">Built With</h3>
 
             <div className="flex flex-wrap gap-3">
               {[
