@@ -183,26 +183,9 @@ export default function Features() {
                   production-grade performance and ultra-low latency.
                 </p>
 
-                <div className="mt-10 flex flex-wrap gap-3">
-                  {[
-                    "98.7% Accuracy",
-                    "Real-Time",
-                    "Low Latency",
-                  ].map((badge) => (
-                    <div
-                      key={badge}
-                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
-                    >
-                      {badge}
-                    </div>
-                  ))}
-                </div>
+                
 
-                <button className="group mt-10 flex w-fit items-center gap-3 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 px-7 py-4 font-semibold text-white shadow-[0_15px_40px_rgba(139,92,246,.35)]">
-                  Explore AI
-
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
+                
               </div>
 
               {/* Right */}
@@ -406,9 +389,7 @@ export default function Features() {
 
                   </div>
 
-                  <div className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-5 py-2 text-lg font-bold text-emerald-400">
-                    +12%
-                  </div>
+                  
 
                 </div>
 
@@ -497,24 +478,7 @@ export default function Features() {
 
                   </p>
 
-                  <div className="mt-10 flex flex-wrap gap-3">
-
-                    {[
-                      "60 FPS",
-                      "18 ms",
-                      "Real-Time",
-                    ].map((badge) => (
-
-                      <div
-                        key={badge}
-                        className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
-                      >
-                        {badge}
-                      </div>
-
-                    ))}
-
-                  </div>
+                  
 
                 </div>
 
@@ -686,20 +650,7 @@ export default function Features() {
 
                 </div>
 
-                <motion.button
-                  whileHover={{
-                    scale: 1.04,
-                    y: -2,
-                  }}
-                  whileTap={{
-                    scale: .98,
-                  }}
-                  className="group mt-12 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 px-8 py-5 text-lg font-semibold text-white shadow-[0_20px_60px_rgba(139,92,246,.35)]"
-                >
-                  Try EMOFI Free
-
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </motion.button>
+                
 
               </div>
 

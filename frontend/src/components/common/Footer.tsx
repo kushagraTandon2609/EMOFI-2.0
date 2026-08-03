@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
-  Globe,
   Mail,
-  Heart,
+  Sparkles,
   ArrowUpRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
+
+import Container from "../ui/Container";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -13,112 +15,259 @@ export default function Footer() {
   return (
     <footer
       id="about"
-      className="relative overflow-hidden border-t border-white/10 bg-[#050816] text-white"
+      className="relative overflow-hidden border-t border-slate-800 bg-[#050816] text-white"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#7c3aed22,transparent_40%),radial-gradient(circle_at_bottom_right,#06b6d422,transparent_35%)]" />
+      {/* Background */}
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20">
+      <div className="absolute inset-0">
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#7c3aed18,transparent_45%)]" />
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,#06b6d418,transparent_35%)]" />
+
+      </div>
+
+      {/* Top Gradient */}
+
+      <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
+
+      <Container className="relative py-20">
+
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid gap-14 lg:grid-cols-[2fr_1fr_1fr]"
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: .6,
+          }}
+          className="grid gap-16 lg:grid-cols-[2fr_1fr_1fr]"
         >
-          {/* Left */}
-          <div>
-            <h2 className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-4xl font-black text-transparent">
-              EMOFI
-            </h2>
 
-            <p className="mt-6 max-w-md leading-8 text-slate-400">
-              Experience the next generation of emotion recognition powered by
-              artificial intelligence. Detect emotions, discover music, and
-              understand yourself better.
+          {/* Brand */}
+
+          <div>
+
+            <div className="flex items-center gap-4">
+
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 via-fuchsia-500 to-cyan-500 shadow-[0_0_35px_rgba(139,92,246,.35)]">
+
+                <Sparkles className="h-7 w-7 text-white" />
+
+              </div>
+
+              <div>
+
+                <h2 className="text-3xl font-black tracking-wide">
+                  EMOFI
+                </h2>
+
+                <p className="text-xs uppercase tracking-[0.35em] text-slate-400">
+                  Emotion Intelligence
+                </p>
+
+              </div>
+
+            </div>
+
+            <p className="mt-8 max-w-lg leading-8 text-slate-400">
+              AI-powered emotion recognition platform that detects
+              facial expressions in real time and recommends music
+              based on your emotional state using TensorFlow,
+              MediaPipe and computer vision.
             </p>
 
             <div className="mt-8 flex gap-4">
-              {[Globe, Mail].map((Icon, i) => (
-                <motion.a
-                  key={i}
-                  href="#"
-                  whileHover={{ y: -6, scale: 1.08 }}
-                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:border-violet-500/40 hover:bg-violet-500/10"
-                >
-                  <Icon className="h-5 w-5" />
-                </motion.a>
-              ))}
+
+              <motion.a
+                whileHover={{
+                  y: -4,
+                  scale: 1.05,
+                }}
+                href="https://github.com/kushagraTandon2609/EMOFI-2.0"
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-lg border border-slate-700 bg-white/5 transition hover:border-violet-500/40 hover:bg-violet-500/10"
+              >
+                <FaGithub className="h-5 w-5" />
+              </motion.a>
+
+              <motion.a
+                whileHover={{
+                  y: -4,
+                  scale: 1.05,
+                }}
+                href="https://www.linkedin.com/in/kushagra-tandon-94905b288/"
+                className="flex h-12 w-12 items-center justify-center rounded-lg border border-slate-700 bg-white/5 transition hover:border-cyan-500/40 hover:bg-cyan-500/10"
+              >
+                <FaLinkedin className="h-5 w-5" />
+              </motion.a>
+
+              <motion.a
+                whileHover={{
+                  y: -4,
+                  scale: 1.05,
+                }}
+                href="mailto:kushagratandonvsec@gmail.com"
+                className="flex h-12 w-12 items-center justify-center rounded-lg border border-slate-700 bg-white/5 transition hover:border-violet-500/40 hover:bg-violet-500/10"
+              >
+                <Mail className="h-5 w-5" />
+              </motion.a>
+
             </div>
+
           </div>
+                    {/* Project */}
 
-          {/* Center */}
           <div>
-            <h3 className="mb-6 text-xl font-bold">Quick Links</h3>
 
-            <div className="space-y-4 text-slate-400">
+            <h3 className="mb-8 text-xl font-bold">
+              Project
+            </h3>
+
+            <div className="space-y-5">
+
               <Link
                 to="/"
-                className="flex items-center gap-2 transition hover:text-white"
+                className="group flex items-center gap-2 text-slate-400 transition hover:text-white"
               >
-                Home <ArrowUpRight size={15} />
+                Home
+
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
 
               <a
                 href="#features"
-                className="flex items-center gap-2 transition hover:text-white"
+                className="group flex items-center gap-2 text-slate-400 transition hover:text-white"
               >
-                Features <ArrowUpRight size={15} />
+                Features
+
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </a>
 
               <Link
-                to="/login"
-                className="flex items-center gap-2 transition hover:text-white"
+                to="/dashboard"
+                className="group flex items-center gap-2 text-slate-400 transition hover:text-white"
               >
-                Login <ArrowUpRight size={15} />
+                Dashboard
+
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
 
-              <Link
-                to="/register"
-                className="flex items-center gap-2 transition hover:text-white"
+              <motion.a
+                href="https://github.com/kushagraTandon2609/EMOFI-2.0"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{
+                  x: 3,
+                }}
+                className="group flex items-center gap-2 text-slate-400 transition hover:text-white"
               >
-                Register <ArrowUpRight size={15} />
-              </Link>
+                GitHub Repository
+
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </motion.a>
+
             </div>
+
           </div>
 
-          {/* Right */}
+          {/* Tech Stack */}
+
           <div>
-            <h3 className="mb-6 text-xl font-bold">Built With</h3>
+
+            <h3 className="mb-8 text-xl font-bold">
+              Technology
+            </h3>
 
             <div className="flex flex-wrap gap-3">
+
               {[
-                "React",
+                "React 19",
                 "TypeScript",
+                "Tailwind CSS",
                 "Flask",
                 "TensorFlow",
                 "MediaPipe",
+                "OpenCV",
                 "MySQL",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-2 text-sm text-violet-300"
+              ].map((tech) => (
+
+                <motion.span
+                  key={tech}
+                  whileHover={{
+                    y: -3,
+                  }}
+                  className="
+                  rounded-lg
+                  border
+                  border-violet-500/20
+                  bg-violet-500/10
+                  px-4
+                  py-2
+                  text-sm
+                  text-violet-300
+                  transition-all
+                  hover:border-violet-400/40
+                  hover:bg-violet-500/15
+                  "
                 >
-                  {item}
-                </span>
+                  {tech}
+                </motion.span>
+
               ))}
+
             </div>
+
           </div>
+
         </motion.div>
+                {/* Bottom */}
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center text-sm text-slate-500 md:flex-row">
-          <p>© {year} EMOFI. All Rights Reserved.</p>
+        <div className="mt-16 border-t border-slate-800 pt-8">
 
-          <p className="flex items-center gap-2">
-            Made with
-            <Heart className="h-4 w-4 fill-red-500 text-red-500" />
-            using AI
-          </p>
+          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+
+            <div>
+
+              <p className="text-sm text-slate-500">
+                © {year} EMOFI. All Rights Reserved.
+              </p>
+
+              <p className="mt-2 text-sm text-slate-400">
+                Designed & Developed by{" "}
+                <span className="font-semibold text-white">
+                  Kushagra Tandon
+                </span>
+              </p>
+
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+
+              <span className="rounded-lg border border-slate-700 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                Version 2.0
+              </span>
+
+              <span className="rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-400">
+                Production Ready
+              </span>
+
+            </div>
+
+          </div>
+
         </div>
-      </div>
+
+      </Container>
+
     </footer>
   );
 }
