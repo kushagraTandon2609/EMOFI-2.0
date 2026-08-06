@@ -48,7 +48,7 @@ export default function Login() {
         JSON.stringify(response.user)
       );
 
-      alert("Login Successful!");
+      
 
       navigate("/dashboard");
     } catch (error: unknown) {

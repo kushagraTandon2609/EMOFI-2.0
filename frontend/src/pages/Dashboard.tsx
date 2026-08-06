@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-import RecommendationCard from "../components/dashboard/RecommendationCard";
+import DashboardLayout from "../components/dashboard/DashboardLayout";
+
 import WebcamCard from "../components/dashboard/WebcamCard";
 import EmotionCard from "../components/dashboard/EmotionCard";
-import DashboardNavbar from "../components/dashboard/DashboardNavbar";
+import RecommendationCard from "../components/dashboard/RecommendationCard";
 
 export default function Dashboard() {
   const [emotion, setEmotion] = useState("Waiting...");
@@ -32,31 +33,25 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <DashboardLayout>
 
-      <div className="mx-auto max-w-7xl p-8">
+      <div className="grid gap-8 xl:grid-cols-3">
 
-        <DashboardNavbar />
+        <WebcamCard
+          onPrediction={handlePrediction}
+        />
 
-        <div className="mt-8 grid gap-8 lg:grid-cols-3">
+        <EmotionCard
+          emotion={emotion}
+          confidence={confidence}
+        />
 
-          <WebcamCard
-            onPrediction={handlePrediction}
-          />
-
-          <EmotionCard
-            emotion={emotion}
-            confidence={confidence}
-          />
-
-          <RecommendationCard
-            songs={songs}
-          />
-
-        </div>
+        <RecommendationCard
+          songs={songs}
+        />
 
       </div>
 
-    </div>
+    </DashboardLayout>
   );
 }
