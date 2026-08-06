@@ -59,7 +59,6 @@ export default function Register() {
       navigate("/login");
         } catch (error: unknown) {
       const err = error as { response?: { data?: { message?: string } } };
-    
       alert(
         err.response?.data?.message ||
           "Registration Failed"
@@ -412,7 +411,7 @@ export default function Register() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
 
         <Link
-          to="/Landing.tsx"
+          to="/"
           className="
           text-sm
           text-slate-500
