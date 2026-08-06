@@ -6,7 +6,6 @@ import {
   BrainCircuit,
   CheckCircle2,
   ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 
 import Input from "../components/common/Input";
@@ -94,7 +93,7 @@ export default function Register() {
 
             <div className="inline-flex items-center gap-2 rounded-lg border border-violet-500/20 bg-white/5 px-4 py-2 backdrop-blur-xl">
 
-              <Sparkles className="h-4 w-4 text-violet-400" />
+              
 
               <span className="text-sm text-slate-300">
                 Welcome to EMOFI
@@ -408,17 +407,19 @@ export default function Register() {
 
       {/* Bottom Link */}
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-8 left-1/2 z-50 -translate-x-1/2">
 
         <Link
-          to="/"
-          className="
-          text-sm
-          text-slate-500
-          transition
-          hover:text-violet-400
-          "
-        >
+  to="/"
+  className="
+  relative
+  z-50
+  text-sm
+  text-slate-400
+  transition
+  hover:text-violet-400
+  "
+>
           ← Back to Home
         </Link>
 
