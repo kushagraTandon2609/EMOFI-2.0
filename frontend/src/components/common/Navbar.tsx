@@ -15,8 +15,6 @@ import GradientButton from "../ui/GradientButton";
 const links = [
   { name: "Features", href: "#features" },
   { name: "About", href: "#about" },
-  { name: "Roadmap", href: "#roadmap" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
