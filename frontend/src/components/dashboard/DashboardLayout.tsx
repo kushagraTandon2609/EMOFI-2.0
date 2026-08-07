@@ -11,23 +11,21 @@ export default function DashboardLayout({
   children,
 }: DashboardLayoutProps) {
   return (
-    <section className="min-h-screen bg-[#050816] text-white">
+    <section className="min-h-screen bg-[#050816]">
 
       {/* Sidebar */}
 
-      <Sidebar />
+      <div className="fixed left-5 top-5 z-50">
+        <Sidebar />
+      </div>
 
-      {/* Main Content */}
+      {/* Main */}
 
-      <main className="ml-[240px]">
-
-        {/* Topbar */}
+      <main className="ml-[245px] min-w-0">
 
         <Topbar />
 
-        {/* Page */}
-
-        <div className="px-8 pb-8">
+        <div className="mx-auto max-w-[1700px] px-8 py-8">
 
           {children}
 

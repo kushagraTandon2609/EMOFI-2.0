@@ -36,17 +36,17 @@ export default function Dashboard() {
   return (
     <DashboardLayout>
 
-      {/* Welcome */}
-
       <WelcomeBanner />
 
-      {/* Main Grid */}
+      {/* Webcam + Emotion */}
 
       <div className="mt-8 grid gap-8 xl:grid-cols-3">
 
-        <WebcamCard
-          onPrediction={handlePrediction}
-        />
+        <div className="xl:col-span-2">
+          <WebcamCard
+            onPrediction={handlePrediction}
+          />
+        </div>
 
         <EmotionCard
           emotion={emotion}
@@ -57,7 +57,7 @@ export default function Dashboard() {
 
       {/* Recommendation */}
 
-      <div className="mt-8">
+      <div className="mt-8 w-full">
 
         <RecommendationCard
           songs={songs}

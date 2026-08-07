@@ -241,37 +241,9 @@ export default function WebcamCard({
 
           </div>
 
-          {/* AI Badge */}
+         
 
-          <div
-            className="
-            absolute
-            right-5
-            top-5
-            z-20
-            rounded-full
-            border
-            border-violet-500/20
-            bg-black/60
-            px-4
-            py-2
-            backdrop-blur-xl
-            "
-          >
-
-            <div className="flex items-center gap-2">
-
-              <BrainCircuit className="h-4 w-4 text-violet-400" />
-
-              <span className="text-xs font-medium text-white">
-
-                TensorFlow Ready
-
-              </span>
-
-            </div>
-
-          </div>
+          
 
           <Webcam
   videoConstraints={{
@@ -373,78 +345,7 @@ screenshotQuality={1}
         </div>
         </div>
 
-      <div className="grid gap-8">
-
-        {[
-          {
-            title: "Camera",
-            value: "Connected",
-            color: "emerald",
-          },
-          {
-            title: "Backend",
-            value: "Online",
-            color: "cyan",
-          },
-          {
-            title: "AI Model",
-            value: "TensorFlow",
-            color: "violet",
-          },
-          {
-            title: "Interval",
-            value: "2 Sec",
-            color: "amber",
-          },
-        ].map((item) => (
-          <motion.div
-            key={item.title}
-            whileHover={{
-              y: -4,
-            }}
-            className="
-            rounded-xl
-            border
-            border-slate-700
-            bg-white/5
-            p-5
-            backdrop-blur-xl
-            "
-          >
-            <p className="text-sm text-slate-400">
-              {item.title}
-            </p>
-
-            <div className="mt-3 flex items-center gap-2">
-
-              <span
-                className={`
-                h-2.5
-                w-2.5
-                rounded-full
-
-                ${
-                  item.color === "emerald"
-                    ? "bg-emerald-400"
-                    : item.color === "cyan"
-                    ? "bg-cyan-400"
-                    : item.color === "violet"
-                    ? "bg-violet-400"
-                    : "bg-amber-400"
-                }
-                `}
-              />
-
-              <h3 className="font-semibold text-white">
-                {item.value}
-              </h3>
-
-            </div>
-
-          </motion.div>
-        ))}
-
-      </div>
+      
 
       {/* Controls */}
 
