@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import DashboardLayout from "../components/dashboard/DashboardLayout";
 
+import WelcomeBanner from "../components/dashboard/WelcomeBanner";
 import WebcamCard from "../components/dashboard/WebcamCard";
 import EmotionCard from "../components/dashboard/EmotionCard";
 import RecommendationCard from "../components/dashboard/RecommendationCard";
@@ -35,7 +36,13 @@ export default function Dashboard() {
   return (
     <DashboardLayout>
 
-      <div className="grid gap-8 xl:grid-cols-3">
+      {/* Welcome */}
+
+      <WelcomeBanner />
+
+      {/* Main Grid */}
+
+      <div className="mt-8 grid gap-8 xl:grid-cols-3">
 
         <WebcamCard
           onPrediction={handlePrediction}
@@ -45,6 +52,12 @@ export default function Dashboard() {
           emotion={emotion}
           confidence={confidence}
         />
+
+      </div>
+
+      {/* Recommendation */}
+
+      <div className="mt-8">
 
         <RecommendationCard
           songs={songs}

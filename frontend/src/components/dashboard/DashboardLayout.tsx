@@ -19,7 +19,7 @@ export default function DashboardLayout({
 
       {/* Main Content */}
 
-      <main className="ml-[290px]">
+      <main className="ml-[240px]">
 
         {/* Topbar */}
 

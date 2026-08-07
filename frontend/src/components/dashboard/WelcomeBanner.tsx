@@ -1,43 +1,65 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { getDashboardStats } from "../../services/dashboard";
 import {
-  ArrowRight,
-  BrainCircuit,
-  History,
-  Sparkles,
+  Activity,
+  Clock3,
+  BarChart3,
+  SmilePlus,
 } from "lucide-react";
+
+interface DashboardStats {
+  todayDetections: number;
+  mostCommonEmotion: string | null;
+  averageConfidence: number | null;
+  lastDetection: string | null;
+}
 
 export default function WelcomeBanner() {
   const user = JSON.parse(
     localStorage.getItem("user") || "{}"
   );
 
-  const hour = new Date().getHours();
+  const [stats, setStats] = useState<DashboardStats>({
+    todayDetections: 0,
+    mostCommonEmotion: null,
+    averageConfidence: null,
+    lastDetection: null,
+  });
 
-  const greeting =
-    hour < 12
-      ? "Good Morning"
-      : hour < 18
-      ? "Good Afternoon"
-      : "Good Evening";
+  // Backend API will be connected here
+  useEffect(() => {
+  const loadStats = async () => {
+    try {
+      const res = await getDashboardStats();
+      setStats(res.stats);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  loadStats();
+}, []);
+
+  
 
   return (
     <motion.section
       initial={{
         opacity: 0,
-        y: 30,
+        y: 25,
       }}
       animate={{
         opacity: 1,
         y: 0,
       }}
       transition={{
-        duration: .7,
+        duration: 0.6,
       }}
       className="
       relative
       overflow-hidden
-      rounded-2xl
+      rounded-3xl
       border
       border-slate-800
       bg-white/5
@@ -45,70 +67,51 @@ export default function WelcomeBanner() {
       backdrop-blur-3xl
       "
     >
-      {/* Glow */}
+
+      {/* Background Glow */}
 
       <div
         className="
         absolute
-        -right-20
-        -top-20
-        h-60
-        w-60
+        -right-28
+        -top-28
+        h-80
+        w-80
         rounded-full
         bg-violet-600/10
-        blur-[120px]
+        blur-[150px]
         "
       />
 
       <div
         className="
         absolute
-        -bottom-20
-        -left-20
-        h-52
-        w-52
+        -left-28
+        -bottom-28
+        h-80
+        w-80
         rounded-full
         bg-cyan-500/10
-        blur-[120px]
+        blur-[150px]
         "
       />
 
       <div className="relative z-10">
 
-        <div
-          className="
-          inline-flex
-          items-center
-          gap-2
-          rounded-full
-          border
-          border-violet-500/20
-          bg-violet-500/10
-          px-4
-          py-2
-          "
-        >
-
-          <Sparkles className="h-4 w-4 text-violet-400" />
-
-          <span className="text-sm text-violet-300">
-
-            Emotion Intelligence Dashboard
-
-          </span>
-
-        </div>
+        
 
         <h1
           className="
           mt-6
+          max-w-4xl
           text-5xl
           font-black
           leading-tight
+          text-white
           "
         >
 
-          {greeting},{" "}
+          Welcome
 
           <span
             className="
@@ -120,6 +123,7 @@ export default function WelcomeBanner() {
             text-transparent
             "
           >
+            {" "}
             {user?.name || "User"}
           </span>
 
@@ -136,162 +140,162 @@ export default function WelcomeBanner() {
           text-slate-400
           "
         >
-          Welcome back to EMOFI. Your AI-powered emotion
-          recognition workspace is ready. Detect emotions,
-          analyze trends and generate personalized music
-          recommendations in real time.
+          Detect emotions in real time, discover mood-based
+          playlists, monitor your emotion history, and explore
+          personalized AI insights—all in one place.
         </p>
-                <div className="mt-8 flex flex-wrap items-center gap-3">
 
-          {[
-            "TensorFlow",
-            "MediaPipe",
-            "Flask API",
-            "4 Supported Emotions",
-          ].map((item) => (
-            <div
-              key={item}
-              className="
-              rounded-full
-              border
-              border-violet-500/20
-              bg-violet-500/10
-              px-4
-              py-2
-              text-sm
-              text-violet-300
-              "
-            >
-              {item}
-            </div>
-          ))}
-
-        </div>
-
-        <div className="mt-10 flex flex-wrap gap-4">
-
-          <Link to="/dashboard">
-
-            <motion.button
-              whileHover={{
-                scale: 1.03,
-              }}
-              whileTap={{
-                scale: .98,
-              }}
-              className="
-              flex
-              items-center
-              gap-2
-              rounded-xl
-              bg-gradient-to-r
-              from-violet-600
-              via-fuchsia-500
-              to-cyan-500
-              px-7
-              py-4
-              font-semibold
-              text-white
-              shadow-[0_10px_40px_rgba(139,92,246,.35)]
-              "
-            >
-
-              <BrainCircuit className="h-5 w-5" />
-
-              Start Detection
-
-              <ArrowRight className="h-5 w-5" />
-
-            </motion.button>
-
-          </Link>
-
-          <Link to="/history">
-
-            <motion.button
-              whileHover={{
-                scale: 1.03,
-              }}
-              whileTap={{
-                scale: .98,
-              }}
-              className="
-              flex
-              items-center
-              gap-2
-              rounded-xl
-              border
-              border-slate-700
-              bg-white/5
-              px-7
-              py-4
-              font-medium
-              text-white
-              backdrop-blur-xl
-              transition-all
-              hover:border-violet-500/40
-              hover:bg-white/10
-              "
-            >
-
-              <History className="h-5 w-5" />
-
-              View History
-
-            </motion.button>
-
-          </Link>
-
-        </div>
+      
+                {/* Dashboard Stats */}
 
         <div
           className="
-          mt-10
+          mt-14
           grid
-          gap-4
-          border-t
-          border-slate-800
-          pt-8
-          md:grid-cols-4
+          gap-5
+          md:grid-cols-2
+          xl:grid-cols-4
           "
         >
 
           {[
             {
-              value: "4",
-              label: "Supported Emotions",
+              icon: Activity,
+              value: stats.todayDetections,
+              label: "Today's Detections",
+              color: "from-violet-600 to-fuchsia-500",
             },
             {
-              value: "510",
-              label: "AI Landmarks",
+              icon: SmilePlus,
+              value:
+                stats.mostCommonEmotion || "No Data",
+              label: "Most Common Emotion",
+              color: "from-cyan-500 to-blue-500",
             },
             {
-              value: "TensorFlow",
-              label: "Inference Engine",
+              icon: BarChart3,
+              value:
+                stats.averageConfidence !== null
+                  ? `${stats.averageConfidence}%`
+                  : "No Data",
+              label: "Average Confidence",
+              color: "from-emerald-500 to-teal-500",
             },
             {
-              value: "MediaPipe",
-              label: "Vision Framework",
+              icon: Clock3,
+              value:
+                stats.lastDetection || "No Data",
+              label: "Last Detection",
+              color: "from-orange-500 to-pink-500",
             },
-          ].map((item) => (
+          ].map((item) => {
+            const Icon = item.icon;
 
-            <div key={item.label}>
+            return (
+              <motion.div
+                key={item.label}
+                whileHover={{
+                  y: -6,
+                  scale: 1.02,
+                }}
+                transition={{
+                  duration: 0.2,
+                }}
+                className="
+                group
+                rounded-2xl
+                border
+                border-slate-700
+                bg-white/5
+                p-6
+                backdrop-blur-xl
+                transition-all
+                hover:border-violet-500/30
+                hover:bg-white/10
+                "
+              >
 
-              <h3 className="text-2xl font-black text-white">
-                {item.value}
-              </h3>
+                <div className="flex items-center justify-between">
 
-              <p className="mt-1 text-sm text-slate-400">
-                {item.label}
-              </p>
+                  <div
+                    className={`
+                    flex
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-gradient-to-br
+                    ${item.color}
+                    shadow-lg
+                    `}
+                  >
 
-            </div>
+                    <Icon className="h-6 w-6 text-white" />
 
-          ))}
+                  </div>
+
+                  <span
+                    className="
+                    rounded-full
+                    border
+                    border-emerald-500/20
+                    bg-emerald-500/10
+                    px-3
+                    py-1
+                    text-xs
+                    font-medium
+                    text-emerald-400
+                    "
+                  >
+                    LIVE
+                  </span>
+
+                </div>
+
+                <h2
+                  className="
+                  mt-7
+                  text-3xl
+                  font-black
+                  text-white
+                  transition-all
+                  group-hover:text-violet-300
+                  "
+                >
+                  {item.value}
+                </h2>
+
+                <p className="mt-2 text-sm text-slate-400">
+                  {item.label}
+                </p>
+
+              </motion.div>
+            );
+          })}
 
         </div>
+                {/* AI Tip */}
+
+        
 
       </div>
+
+      {/* Bottom Accent */}
+
+      <div
+        className="
+        absolute
+        bottom-0
+        left-0
+        h-px
+        w-full
+        bg-gradient-to-r
+        from-transparent
+        via-violet-500/60
+        to-transparent
+        "
+      />
 
     </motion.section>
   );

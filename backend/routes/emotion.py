@@ -81,3 +81,17 @@ def detect():
             "success": False,
             "message": str(e)
         }), 500
+        
+        
+@emotion.route("/dashboard/stats", methods=["GET"])
+@jwt_required()
+def dashboard_stats():
+
+    user_id = int(get_jwt_identity())
+
+    stats = history_service.get_dashboard_stats(user_id)
+
+    return jsonify({
+        "success": True,
+        "stats": stats
+    })        

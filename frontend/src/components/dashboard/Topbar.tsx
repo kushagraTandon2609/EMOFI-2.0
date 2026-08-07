@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import {
-  Bell,
-  BrainCircuit,
-  Search,
+  ChevronDown,
+  LogOut,
+  User,
 } from "lucide-react";
-
 import { motion } from "framer-motion";
 
 export default function Topbar() {
@@ -13,6 +12,7 @@ export default function Topbar() {
   );
 
   const [time, setTime] = useState(new Date());
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,22 +21,6 @@ export default function Topbar() {
 
     return () => clearInterval(interval);
   }, []);
-
-  const hour = time.getHours();
-
-  const greeting =
-    hour < 12
-      ? "Good Morning"
-      : hour < 18
-      ? "Good Afternoon"
-      : "Good Evening";
-
-  const currentDate = time.toLocaleDateString("en-IN", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
 
   return (
     <header
@@ -50,220 +34,101 @@ export default function Topbar() {
       backdrop-blur-3xl
       "
     >
+
       <div
         className="
         flex
         items-center
-        justify-between
+        justify-end
+        gap-5
         px-8
-        py-6
+        py-5
         "
       >
-        {/* LEFT */}
 
-        <div>
+        
 
-          <motion.h1
-            initial={{
-              opacity: 0,
-              y: 10,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            className="
-            text-3xl
-            font-black
-            text-white
-            "
-          >
-            {greeting},{" "}
-            <span
-              className="
-              bg-gradient-to-r
-              from-violet-400
-              to-cyan-400
-              bg-clip-text
-              text-transparent
-              "
-            >
-              {user?.name || "User"}
-            </span>
-            👋
-          </motion.h1>
+        <motion.div
+  initial={{
+    opacity: 0,
+    x: -20,
+  }}
+  animate={{
+    opacity: 1,
+    x: 0,
+  }}
+  className="flex-1"
+>
+  <h1
+    className="
+    bg-gradient-to-r
+    from-violet-400
+    via-fuchsia-400
+    to-cyan-400
+    bg-clip-text
+    text-3xl
+    font-black
+    tracking-tight
+    text-transparent
+    lg:text-5xl
+    "
+  >
+    Emotion Intelligence Dashboard
+  </h1>
 
-          <p className="mt-1 text-slate-400">
-            {currentDate}
-          </p>
+  <p className="mt-2 text-sm text-slate-400">
+    Real-time AI-powered emotion recognition and personalized music recommendations
+  </p>
+</motion.div>
 
-        </div>
-                {/* RIGHT */}
+        {/* Time */}
 
-        <div className="flex items-center gap-5">
+        <motion.div
+          whileHover={{
+            scale: 1.03,
+          }}
+          className="
+          hidden
+          md:flex
+          flex-col
+          items-end
+          rounded-2xl
+          border
+          border-slate-700
+          bg-white/5
+          px-5
+          py-3
+          "
+        >
 
-          {/* Search */}
+          <span className="text-xs text-slate-500">
 
-          <div className="relative hidden lg:block">
+            Time
 
-            <Search
-              className="
-              absolute
-              left-4
-              top-1/2
-              h-4
-              w-4
-              -translate-y-1/2
-              text-slate-500
-              "
-            />
+          </span>
 
-            <input
-              type="text"
-              placeholder="Search history, emotions..."
-              className="
-              h-12
-              w-[320px]
-              rounded-2xl
-              border
-              border-slate-700
-              bg-white/5
-              pl-11
-              pr-4
-              text-sm
-              text-white
-              outline-none
-              transition-all
-              placeholder:text-slate-500
-              focus:border-violet-500
-              focus:bg-white/10
-              "
-            />
+          <span className="font-semibold tracking-wide text-white">
 
-          </div>
+            {time.toLocaleTimeString("en-IN", {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
 
-          {/* AI Status */}
+          </span>
 
-          <motion.div
-            whileHover={{
-              scale: 1.05,
-            }}
-            className="
-            flex
-            items-center
-            gap-3
-            rounded-2xl
-            border
-            border-emerald-500/20
-            bg-emerald-500/10
-            px-4
-            py-3
-            "
-          >
+        </motion.div>
+                {/* User Profile */}
 
-            <BrainCircuit className="h-5 w-5 text-emerald-400" />
-
-            <div>
-
-              <p className="text-xs text-slate-400">
-                AI Status
-              </p>
-
-              <div className="flex items-center gap-2">
-
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-
-                <span className="text-sm font-semibold text-emerald-400">
-                  Online
-                </span>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
-          {/* Notification */}
+        <div className="relative">
 
           <motion.button
             whileHover={{
-              scale: 1.08,
-            }}
-            whileTap={{
-              scale: .95,
-            }}
-            className="
-            relative
-            flex
-            h-12
-            w-12
-            items-center
-            justify-center
-            rounded-2xl
-            border
-            border-slate-700
-            bg-white/5
-            transition-all
-            hover:border-violet-500
-            hover:bg-violet-500/10
-            "
-          >
-
-            <Bell className="h-5 w-5 text-white" />
-
-            <span
-              className="
-              absolute
-              right-3
-              top-3
-              h-2.5
-              w-2.5
-              rounded-full
-              bg-red-500
-              "
-            />
-
-          </motion.button>
-                    {/* Live Clock */}
-
-          <motion.div
-            whileHover={{
               scale: 1.03,
             }}
-            className="
-            hidden
-            xl:flex
-            flex-col
-            items-end
-            rounded-2xl
-            border
-            border-slate-700
-            bg-white/5
-            px-5
-            py-3
-            "
-          >
-
-            <span className="text-xs text-slate-500">
-              Local Time
-            </span>
-
-            <span className="font-semibold tracking-wide text-white">
-              {time.toLocaleTimeString("en-IN", {
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit",
-              })}
-            </span>
-
-          </motion.div>
-
-          {/* User */}
-
-          <motion.div
-            whileHover={{
-              scale: 1.04,
+            whileTap={{
+              scale: 0.98,
             }}
+            onClick={() => setOpen(!open)}
             className="
             flex
             items-center
@@ -282,8 +147,8 @@ export default function Topbar() {
             <div
               className="
               flex
-              h-12
-              w-12
+              h-11
+              w-11
               items-center
               justify-center
               rounded-full
@@ -294,30 +159,129 @@ export default function Topbar() {
               text-lg
               font-bold
               text-white
-              shadow-lg
               "
             >
               {user?.name?.charAt(0)?.toUpperCase() || "U"}
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block text-left">
 
               <p className="font-semibold text-white">
                 {user?.name || "User"}
               </p>
 
               <p className="text-xs text-slate-400">
-                AI Explorer
+                {user?.email || ""}
               </p>
 
             </div>
 
-          </motion.div>
+            <ChevronDown
+              className={`
+              h-5
+              w-5
+              text-slate-400
+              transition-transform
+              ${open ? "rotate-180" : ""}
+              `}
+            />
+
+          </motion.button>
+
+          {/* Dropdown */}
+
+          {open && (
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 10,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              className="
+              absolute
+              right-0
+              mt-3
+              w-60
+              overflow-hidden
+              rounded-2xl
+              border
+              border-slate-700
+              bg-[#0b1220]
+              shadow-2xl
+              "
+            >
+
+              <div className="border-b border-slate-700 p-4">
+
+                <p className="font-semibold text-white">
+                  {user?.name}
+                </p>
+
+                
+
+              </div>
+
+              <button
+              onClick={() => {
+                  
+                  window.location.href = "/Profile";
+                }}
+                className="
+                flex
+                w-full
+                items-center
+                gap-3
+                px-5
+                py-4
+                text-white
+                transition
+                hover:bg-white/5
+                "
+              >
+
+                <User className="h-5 w-5" />
+
+                Profile
+
+              </button>
+                            <button
+                onClick={() => {
+                  localStorage.removeItem("token");
+                  localStorage.removeItem("user");
+                  window.location.href = "/login";
+                }}
+                className="
+                flex
+                w-full
+                items-center
+                gap-3
+                px-5
+                py-4
+                text-red-400
+                transition
+                hover:bg-red-500/10
+                "
+              >
+
+                <LogOut className="h-5 w-5" />
+
+                Logout
+
+              </button>
+
+            </motion.div>
+
+          )}
 
         </div>
 
       </div>
-            {/* Bottom Gradient */}
+
+      {/* Bottom Gradient */}
 
       <div
         className="
@@ -334,20 +298,6 @@ export default function Topbar() {
       />
 
       {/* Background Glow */}
-
-      <div
-        className="
-        pointer-events-none
-        absolute
-        -left-24
-        top-0
-        h-40
-        w-40
-        rounded-full
-        bg-violet-600/10
-        blur-[100px]
-        "
-      />
 
       <div
         className="

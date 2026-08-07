@@ -60,7 +60,7 @@ export default function Sidebar() {
       z-50
       flex
       h-screen
-      w-[290px]
+      w-[240px]
       flex-col
       border-r
       border-slate-800
