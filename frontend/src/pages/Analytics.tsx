@@ -1,67 +1,159 @@
 import { useEffect, useState } from "react";
 
-import DashboardNavbar from "../components/dashboard/DashboardNavbar";
-import AnalyticsCard from "../components/analytics/AnalyticsCard";
+import DashboardLayout from "../components/dashboard/DashboardLayout";
 
-import { getAnalytics } from "../services/analytics";
+import AnalyticsHero from "../components/analytics/AnalyticsHero";
+import StatsGrid from "../components/analytics/StatsGrid";
+import EmotionPieChart from "../components/analytics/EmotionPieChart";
+import MoodTrendChart from "../components/analytics/MoodTrendChart";
+import ConfidenceChart from "../components/analytics/ConfidenceChart";
+import AIInsights from "../components/analytics/AIInsights";
 
-interface AnalyticsData {
-  total: number;
-  most_common: string | null;
-  last_detection: {
-    emotion: string;
-    confidence: number;
-    created_at: string;
-  } | null;
-  distribution: Record<string, number>;
-}
+import {
+  getAnalytics,
+  type AnalyticsData,
+} from "../services/analytics";
 
 export default function Analytics() {
-
   const [analytics, setAnalytics] =
     useState<AnalyticsData | null>(null);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
+    const loadAnalytics = async () => {
+      try {
+        const response = await getAnalytics();
+
+        if (response.success) {
+          setAnalytics(response.analytics);
+        }
+      } catch (error) {
+        console.error(
+          "Failed to load analytics:",
+          error
+        );
+      } finally {
+        setLoading(false);
+      }
+    };
+
     loadAnalytics();
   }, []);
 
-  const loadAnalytics = async () => {
-    try {
+  if (loading) {
+    return (
+      <DashboardLayout>
+        <div
+          className="
+          flex
+          min-h-[60vh]
+          items-center
+          justify-center
+          "
+        >
+          <div className="text-center">
 
-      const response = await getAnalytics();
+            <div
+              className="
+              mx-auto
+              h-10
+              w-10
+              animate-spin
+              rounded-full
+              border-2
+              border-slate-700
+              border-t-violet-500
+              "
+            />
 
-      if (response.success) {
-        setAnalytics(response.analytics);
-      }
+            <p className="mt-4 text-sm text-slate-500">
+              Loading your analytics...
+            </p>
 
-    } catch (error) {
-      console.error(error);
-    }
-  };
+          </div>
+        </div>
+      </DashboardLayout>
+    );
+  }
 
   if (!analytics) {
     return (
-      <div className="flex h-screen items-center justify-center">
-        Loading...
-      </div>
+      <DashboardLayout>
+        <div
+          className="
+          flex
+          min-h-[60vh]
+          items-center
+          justify-center
+          "
+        >
+          <div className="text-center">
+
+            <h2 className="text-xl font-bold text-white">
+              Unable to load analytics
+            </h2>
+
+            <p className="mt-2 text-sm text-slate-500">
+              Please try again later.
+            </p>
+
+          </div>
+        </div>
+      </DashboardLayout>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <DashboardLayout>
 
-      <div className="mx-auto max-w-7xl p-8">
+      <AnalyticsHero />
 
-        <DashboardNavbar />
+      <StatsGrid
+  stats={{
+    totalDetections: analytics.total,
+    mostDetectedEmotion: analytics.most_common,
+    lastDetectionEmotion:
+      analytics.last_detection?.emotion ?? null,
+    lastDetectionConfidence:
+      analytics.last_detection?.confidence ?? null,
+  }}
+/>
 
-        <div className="mt-8">
+      <EmotionPieChart
+        data={Object.entries(
+          analytics.distribution
+        ).map(([emotion, count]) => ({
+          emotion,
+          count,
+        }))}
+      />
 
-          <AnalyticsCard analytics={analytics} />
+      <MoodTrendChart
+  data={analytics.mood_trend}
+/>
 
-        </div>
+<ConfidenceChart
+  data={analytics.confidence_trend}
+/>
+      <AIInsights
+        mostCommonEmotion={
+          analytics.most_common
+        }
 
-      </div>
+        averageConfidence={
+          analytics.last_detection
+            ? analytics.last_detection.confidence
+            : null
+        }
 
-    </div>
+        totalDetections={
+          analytics.total
+        }
+
+        activeDays={0}
+      />
+
+    </DashboardLayout>
   );
 }
