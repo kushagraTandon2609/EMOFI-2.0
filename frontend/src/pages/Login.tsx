@@ -99,13 +99,7 @@ export default function Login() {
 
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
-
-              Sign in to access your dashboard,
-              emotion history, analytics and
-              AI-powered music recommendations.
-
-            </p>
+            
                         <div className="mt-12 space-y-6">
 
               {[
