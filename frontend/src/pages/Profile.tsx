@@ -4,10 +4,11 @@ import DashboardLayout from "../components/dashboard/DashboardLayout";
 
 import ProfileHero from "../components/profile/ProfileHero";
 import ProfileStats from "../components/profile/ProfileStats";
-import ProfileAccount from "../components/profile/ProfileAccount";
+import ProfileCard from "../components/profile/ProfileCard";
 import Achievements from "../components/profile/Achievements";
 
 import { getHistory } from "../services/history";
+import { getAnalytics } from "../services/analytics";
 
 interface HistoryItem {
   id: number;
@@ -17,13 +18,30 @@ interface HistoryItem {
 }
 
 interface User {
+  id?: number;
   name?: string;
   email?: string;
+}
+
+interface AnalyticsData {
+  total: number;
+  most_common: string | null;
+
+  last_detection: {
+    emotion: string;
+    confidence: number;
+    created_at: string;
+  } | null;
+
+  distribution: Record<string, number>;
 }
 
 export default function Profile() {
   const [history, setHistory] =
     useState<HistoryItem[]>([]);
+
+  const [analytics, setAnalytics] =
+    useState<AnalyticsData | null>(null);
 
   const [user, setUser] =
     useState<User>({});
@@ -38,17 +56,32 @@ export default function Profile() {
 
     setUser(storedUser);
 
-    const loadHistory = async () => {
+    const loadProfileData = async () => {
       try {
-        const response =
-          await getHistory();
+        setLoading(true);
 
-        if (response.success) {
-          setHistory(response.history);
+        const [
+          historyResponse,
+          analyticsResponse,
+        ] = await Promise.all([
+          getHistory(),
+          getAnalytics(),
+        ]);
+
+        if (historyResponse.success) {
+          setHistory(
+            historyResponse.history
+          );
+        }
+
+        if (analyticsResponse.success) {
+          setAnalytics(
+            analyticsResponse.analytics
+          );
         }
       } catch (error) {
         console.error(
-          "Failed to load profile history:",
+          "Failed to load profile data:",
           error
         );
       } finally {
@@ -56,7 +89,7 @@ export default function Profile() {
       }
     };
 
-    loadHistory();
+    loadProfileData();
   }, []);
 
   const stats = useMemo(() => {
@@ -84,8 +117,9 @@ export default function Profile() {
 
     const mostCommon =
       Object.entries(emotionCounts)
-        .sort((a, b) => b[1] - a[1])[0]?.[0] ||
-      null;
+        .sort(
+          (a, b) => b[1] - a[1]
+        )[0]?.[0] || null;
 
     const averageConfidence =
       history.reduce(
@@ -96,24 +130,32 @@ export default function Profile() {
 
     return {
       total: history.length,
+
       mostCommon,
+
       latestEmotion:
         history[0]?.emotion || null,
+
       averageConfidence,
     };
   }, [history]);
+    // --------------------------------------------------
+  // LOADING
+  // --------------------------------------------------
 
   if (loading) {
     return (
       <DashboardLayout>
+
         <div
           className="
           flex
-          min-h-[60vh]
+          min-h-[65vh]
           items-center
           justify-center
           "
         >
+
           <div className="text-center">
 
             <div
@@ -136,36 +178,57 @@ export default function Profile() {
               text-slate-500
               "
             >
-              Loading your profile...
+              Loading your EMOFI profile...
             </p>
 
           </div>
+
         </div>
+
       </DashboardLayout>
     );
   }
 
+  // --------------------------------------------------
+  // PROFILE PAGE
+  // --------------------------------------------------
+
   return (
     <DashboardLayout>
+
+      {/* Profile Hero */}
 
       <ProfileHero
         name={user.name || "User"}
         email={user.email}
       />
 
+      {/* Profile Stats */}
+
       <ProfileStats
         stats={stats}
       />
 
-      <ProfileAccount
-        name={user.name || "User"}
-        email={user.email || ""}
+      {/* Account + Mood Profile */}
+
+      <ProfileCard
+        user={{
+          id: user.id || 0,
+          name: user.name || "User",
+          email: user.email || "",
+        }}
+        distribution={
+          analytics?.distribution || {}
+        }
       />
+
+      {/* Achievements */}
 
       <Achievements
         totalDetections={stats.total}
       />
-            <div className="h-8" />
+
+      <div className="h-8" />
 
     </DashboardLayout>
   );
