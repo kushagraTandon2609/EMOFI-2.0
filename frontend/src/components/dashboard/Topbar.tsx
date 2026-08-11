@@ -59,7 +59,7 @@ export default function Topbar() {
   }}
   className="flex-1"
 >
-  <h1
+  <h3
     className="
     bg-gradient-to-r
     from-violet-400
@@ -74,7 +74,7 @@ export default function Topbar() {
     "
   >
     Emotion Intelligence Dashboard
-  </h1>
+  </h3>
 
   <p className="mt-2 text-sm text-slate-400">
     Real-time AI-powered emotion recognition and personalized music recommendations
