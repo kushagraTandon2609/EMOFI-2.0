@@ -40,71 +40,97 @@ export default function Sidebar() {
         duration: 0.5,
       }}
       className="
-      sticky
-      top-6
-      flex
-      h-[calc(100vh-48px)]
-      w-[220px]
-      flex-col
-      rounded-3xl
-      border
-      border-slate-800
-      bg-[#0b1220]/80
-      backdrop-blur-3xl
-      shadow-[0_20px_60px_rgba(0,0,0,.35)]
+        sticky
+        top-6
+        flex
+        h-[calc(100vh-48px)]
+        w-[220px]
+        flex-col
+        rounded-3xl
+        border
+        border-slate-800
+        bg-[#0b1220]/80
+        backdrop-blur-3xl
+        shadow-[0_20px_60px_rgba(0,0,0,.35)]
+        overflow-hidden
       "
     >
 
-      {/* Logo */}
+      {/* ========================= */}
+      {/* EMOFI LOGO */}
+      {/* ========================= */}
 
-      <div className="px-7 pt-8 pb-7">
+      <div className="px-4 pt-5 pb-5">
 
-        <div className="flex items-center gap-3">
+        <div
+          className="
+            relative
+            h-70
+            w-full
+            overflow-hidden
+            rounded-3xl
+            border
+            border-violet-500/20
+            bg-black
+            shadow-[0_0_35px_rgba(139,92,246,0.18)]
+          "
+        >
 
-          <div
+          <img
+            src="/emofi-logo.png"
+            alt="EMOFI"
             className="
-            h-11
-            w-11
-            rounded-2xl
-            bg-gradient-to-br
-            from-violet-600
-            via-fuchsia-500
-            to-cyan-500
+              h-full
+              w-full
+              object-cover
+              object-center
             "
           />
 
-          <div>
+          {/* Logo glow */}
 
-            <h2 className="text-xl font-black text-white">
-              EMOFI
-            </h2>
-
-            <p className="text-xs text-slate-500">
-              Emotion Intelligence
-            </p>
-
-          </div>
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-violet-950/20
+              via-transparent
+              to-transparent
+            "
+          />
 
         </div>
 
       </div>
 
+
+      {/* ========================= */}
+      {/* DIVIDER */}
+      {/* ========================= */}
+
       <div
         className="
-        mx-6
-        mb-6
-        h-px
-        bg-gradient-to-r
-        from-transparent
-        via-slate-700
-        to-transparent
+          mx-6
+          mb-6
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-slate-700
+          to-transparent
         "
       />
 
-      {/* Navigation */}
 
-      <nav className="flex-1 px-4 space-y-2">
-                {links.map((item) => {
+      {/* ========================= */}
+      {/* NAVIGATION */}
+      {/* ========================= */}
+
+      <nav className="flex-1 space-y-2 px-4">
+
+        {links.map((item) => {
+
           const Icon = item.icon;
 
           return (
@@ -112,7 +138,9 @@ export default function Sidebar() {
               key={item.title}
               to={item.path}
             >
+
               {({ isActive }) => (
+
                 <motion.div
                   whileHover={{
                     x: 4,
@@ -121,74 +149,84 @@ export default function Sidebar() {
                     scale: 0.98,
                   }}
                   className={`
-                  group
-                  flex
-                  items-center
-                  gap-4
-                  rounded-2xl
-                  px-5
-                  py-4
-                  transition-all
-                  duration-300
-                  ${
-                    isActive
-                      ? "bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 text-white shadow-lg shadow-violet-500/20"
-                      : "text-slate-400 hover:bg-white/5 hover:text-white"
-                  }
+                    group
+                    flex
+                    items-center
+                    gap-4
+                    rounded-2xl
+                    px-5
+                    py-4
+                    transition-all
+                    duration-300
+
+                    ${
+                      isActive
+                        ? "bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 text-white shadow-lg shadow-violet-500/20"
+                        : "text-slate-400 hover:bg-white/5 hover:text-white"
+                    }
                   `}
                 >
 
                   <Icon
                     size={22}
                     className={`
-                    transition-transform
-                    duration-300
-                    ${
-                      isActive
-                        ? "scale-110"
-                        : "group-hover:scale-110"
-                    }
+                      transition-transform
+                      duration-300
+
+                      ${
+                        isActive
+                          ? "scale-110"
+                          : "group-hover:scale-110"
+                      }
                     `}
                   />
 
                   <span
                     className="
-                    text-[15px]
-                    font-semibold
-                    tracking-wide
+                      text-[15px]
+                      font-semibold
+                      tracking-wide
                     "
                   >
                     {item.title}
                   </span>
 
                 </motion.div>
+
               )}
+
             </NavLink>
           );
+
         })}
+
       </nav>
-            {/* Bottom */}
+
+
+      {/* ========================= */}
+      {/* BOTTOM */}
+      {/* ========================= */}
 
       <div className="px-6 pb-7">
 
         <div
           className="
-          mb-5
-          h-px
-          bg-gradient-to-r
-          from-transparent
-          via-slate-700
-          to-transparent
+            mb-5
+            h-px
+            bg-gradient-to-r
+            from-transparent
+            via-slate-700
+            to-transparent
           "
         />
 
         <p
           className="
-          text-center
-          text-xs
-          tracking-[0.25em]
-          uppercase
-          text-slate-600
+            text-center
+            text-xs
+            uppercase
+            tracking-[0.25em]
+            text-slate-600
           "
         >
           Version 2.0
@@ -196,33 +234,36 @@ export default function Sidebar() {
 
       </div>
 
-      {/* Background Glow */}
+
+      {/* ========================= */}
+      {/* BACKGROUND GLOWS */}
+      {/* ========================= */}
 
       <div
         className="
-        pointer-events-none
-        absolute
-        -top-24
-        -left-24
-        h-48
-        w-48
-        rounded-full
-        bg-violet-600/10
-        blur-[120px]
+          pointer-events-none
+          absolute
+          -left-24
+          -top-24
+          h-48
+          w-48
+          rounded-full
+          bg-violet-600/10
+          blur-[120px]
         "
       />
 
       <div
         className="
-        pointer-events-none
-        absolute
-        -bottom-24
-        -right-24
-        h-48
-        w-48
-        rounded-full
-        bg-cyan-500/10
-        blur-[120px]
+          pointer-events-none
+          absolute
+          -bottom-24
+          -right-24
+          h-48
+          w-48
+          rounded-full
+          bg-cyan-500/10
+          blur-[120px]
         "
       />
 
