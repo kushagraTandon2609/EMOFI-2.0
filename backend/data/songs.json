@@ -1,73 +1,2437 @@
 {
-  "happy": [
-    {
-      "title": "Blinding Lights",
-      "artist": "The Weeknd",
-      "youtube": "https://www.youtube.com/results?search_query=Blinding+Lights"
-    },
-    {
-      "title": "Perfect",
-      "artist": "Ed Sheeran",
-      "youtube": "https://www.youtube.com/results?search_query=Perfect+Ed+Sheeran"
-    },
-    {
-      "title": "Levitating",
-      "artist": "Dua Lipa",
-      "youtube": "https://www.youtube.com/results?search_query=Levitating"
-    }
-  ],
-
-  "sad": [
-    {
-      "title": "Someone Like You",
-      "artist": "Adele",
-      "youtube": "https://www.youtube.com/results?search_query=Someone+Like+You"
-    },
-    {
-      "title": "Fix You",
-      "artist": "Coldplay",
-      "youtube": "https://www.youtube.com/results?search_query=Fix+You"
-    },
-    {
-      "title": "Let Her Go",
-      "artist": "Passenger",
-      "youtube": "https://www.youtube.com/results?search_query=Let+Her+Go"
-    }
-  ],
-
-  "angry": [
-    {
-      "title": "Believer",
-      "artist": "Imagine Dragons",
-      "youtube": "https://www.youtube.com/results?search_query=Believer"
-    },
-    {
-      "title": "Numb",
-      "artist": "Linkin Park",
-      "youtube": "https://www.youtube.com/results?search_query=Numb"
-    },
-    {
-      "title": "Enemy",
-      "artist": "Imagine Dragons",
-      "youtube": "https://www.youtube.com/results?search_query=Enemy"
-    }
-  ],
-
-  "surprise": [
-    {
-      "title": "On Top Of The World",
-      "artist": "Imagine Dragons",
-      "youtube": "https://www.youtube.com/results?search_query=On+Top+Of+The+World"
-    },
-    {
-      "title": "Counting Stars",
-      "artist": "OneRepublic",
-      "youtube": "https://www.youtube.com/results?search_query=Counting+Stars"
-    },
-    {
-      "title": "Adventure Of A Lifetime",
-      "artist": "Coldplay",
-      "youtube": "https://www.youtube.com/results?search_query=Adventure+Of+A+Lifetime"
-    }
-  ]
+  "happy": {
+    "party": [
+      {
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "youtubeId": "fHI8X4OXluQ"
+      },
+      {
+        "title": "Levitating",
+        "artist": "Dua Lipa",
+        "youtubeId": "TUVcZfQe-Kw"
+      },
+      {
+        "title": "Don't Start Now",
+        "artist": "Dua Lipa",
+        "youtubeId": "xjiYBGs0TUA"
+      },
+      {
+        "title": "Uptown Funk",
+        "artist": "Mark Ronson ft. Bruno Mars",
+        "youtubeId": "OPf0YbXqDm0"
+      },
+      {
+        "title": "Dance Monkey",
+        "artist": "Tones and I",
+        "youtubeId": "0Yy9YzdmTJA"
+      },
+      {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "youtubeId": "_dK2tDK9grQ"
+      },
+      {
+        "title": "Havana",
+        "artist": "Camila Cabello",
+        "youtubeId": "HCjNJDNzw8Y"
+      },
+      {
+        "title": "Sugar",
+        "artist": "Maroon 5",
+        "youtubeId": "GhH4rTap48M"
+      },
+      {
+        "title": "Can't Stop the Feeling!",
+        "artist": "Justin Timberlake",
+        "youtubeId": "KbyPok-3dio"
+      },
+      {
+        "title": "Happy",
+        "artist": "Pharrell Williams",
+        "youtubeId": "4m-_cqRsoqA"
+      },
+      {
+        "title": "Cheap Thrills",
+        "artist": "Sia",
+        "youtubeId": "J1b22l1kFKY"
+      },
+      {
+        "title": "I Gotta Feeling",
+        "artist": "The Black Eyed Peas",
+        "youtubeId": "CwdrtwZiQ9E"
+      },
+      {
+        "title": "Party Rock Anthem",
+        "artist": "LMFAO",
+        "youtubeId": "zIh5AHxh-Ok"
+      },
+      {
+        "title": "On The Floor",
+        "artist": "Jennifer Lopez ft. Pitbull",
+        "youtubeId": "AmaekFwpjOY"
+      },
+      {
+        "title": "Starships",
+        "artist": "Nicki Minaj",
+        "youtubeId": "ib5vOL3Ka2s"
+      },
+      {
+        "title": "Timber",
+        "artist": "Pitbull ft. Kesha",
+        "youtubeId": "hHUbLv4ThOo"
+      },
+      {
+        "title": "Waka Waka",
+        "artist": "Shakira",
+        "youtubeId": "czWcyZRAMtk"
+      },
+      {
+        "title": "Firework",
+        "artist": "Katy Perry",
+        "youtubeId": "KLc5qNAzLaM"
+      },
+      {
+        "title": "Roar",
+        "artist": "Katy Perry",
+        "youtubeId": "mwL1cohnHNE"
+      },
+      {
+        "title": "Girls Like You",
+        "artist": "Maroon 5",
+        "youtubeId": "7mk1f7qQu_U"
+      },
+      {
+        "title": "Senorita",
+        "artist": "Shawn Mendes & Camila Cabello",
+        "youtubeId": "GUNIrPe707s"
+      },
+      {
+        "title": "Watermelon Sugar",
+        "artist": "Harry Styles",
+        "youtubeId": "7-x3uD5z1bQ"
+      },
+      {
+        "title": "As It Was",
+        "artist": "Harry Styles",
+        "youtubeId": "V1Z586zoeeE"
+      },
+      {
+        "title": "One Kiss",
+        "artist": "Calvin Harris & Dua Lipa",
+        "youtubeId": "oCab3KiXveY"
+      },
+      {
+        "title": "We Found Love",
+        "artist": "Rihanna ft. Calvin Harris",
+        "youtubeId": "GchEVSx9XEA"
+      },
+      {
+        "title": "This Is What You Came For",
+        "artist": "Calvin Harris ft. Rihanna",
+        "youtubeId": "kOkQ4T5WO9E"
+      },
+      {
+        "title": "Don't You Worry Child",
+        "artist": "Swedish House Mafia",
+        "youtubeId": "3mWbRB3Y4R8"
+      },
+      {
+        "title": "Wake Me Up",
+        "artist": "Avicii",
+        "youtubeId": "5y_KJAg8bHI"
+      },
+      {
+        "title": "Levels",
+        "artist": "Avicii",
+        "youtubeId": "wDuoOapZ9Z0"
+      },
+      {
+        "title": "Rather Be",
+        "artist": "Clean Bandit",
+        "youtubeId": "jUjDcqdvCrk"
+      }
+    ],
+    "chill": [
+      {
+        "title": "Perfect",
+        "artist": "Ed Sheeran",
+        "youtubeId": "2Vv-BfVoq4g"
+      },
+      {
+        "title": "Photograph",
+        "artist": "Ed Sheeran",
+        "youtubeId": "KKQl-pIRQMY"
+      },
+      {
+        "title": "Yellow",
+        "artist": "Coldplay",
+        "youtubeId": "yKNxeF4KMsY"
+      },
+      {
+        "title": "A Sky Full of Stars",
+        "artist": "Coldplay",
+        "youtubeId": "zp7NtW_hKJI"
+      },
+      {
+        "title": "Lovely",
+        "artist": "Billie Eilish & Khalid",
+        "youtubeId": "wjj2upnfBI0"
+      },
+      {
+        "title": "Ocean Eyes",
+        "artist": "Billie Eilish",
+        "youtubeId": "d--DyK0wtYo"
+      },
+      {
+        "title": "Until I Found You",
+        "artist": "Stephen Sanchez",
+        "youtubeId": "MlThQTo6D8A"
+      },
+      {
+        "title": "Sunflower",
+        "artist": "Post Malone & Swae Lee",
+        "youtubeId": "ApXoWvfEYVU"
+      },
+      {
+        "title": "Dandelions",
+        "artist": "Ruth B.",
+        "youtubeId": "W8a4sUabCUo"
+      },
+      {
+        "title": "Golden Hour",
+        "artist": "JVKE",
+        "youtubeId": "UsR08cY8k0A"
+      },
+      {
+        "title": "Daylight",
+        "artist": "David Kushner",
+        "youtubeId": "PZtwxD5Myk0"
+      },
+      {
+        "title": "Here With Me",
+        "artist": "d4vd",
+        "youtubeId": "B7Y4LHbpXv0"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron",
+        "youtubeId": "KtlgYxa6BMU"
+      },
+      {
+        "title": "Home",
+        "artist": "Edward Sharpe & The Magnetic Zeros",
+        "youtubeId": "-zpEMkKJd0M"
+      },
+      {
+        "title": "Riptide",
+        "artist": "Vance Joy",
+        "youtubeId": "TL_oroU9eN8"
+      },
+      {
+        "title": "Put Your Records On",
+        "artist": "Corinne Bailey Rae",
+        "youtubeId": "rjOhZZyn30k"
+      },
+      {
+        "title": "Sunday Morning",
+        "artist": "Maroon 5",
+        "youtubeId": "to5Sg2KeEnU"
+      },
+      {
+        "title": "Count on Me",
+        "artist": "Bruno Mars",
+        "youtubeId": "6k8cpUkKK4c"
+      },
+      {
+        "title": "Best Part",
+        "artist": "Daniel Caesar ft. H.E.R.",
+        "youtubeId": "vBy7FaapGRo"
+      },
+      {
+        "title": "Location",
+        "artist": "Khalid",
+        "youtubeId": "j0bbRsa-Y9E"
+      },
+      {
+        "title": "Talk",
+        "artist": "Khalid",
+        "youtubeId": "Y1QZOprK7PQ"
+      },
+      {
+        "title": "Better",
+        "artist": "Khalid",
+        "youtubeId": "KkOF8UiB7u8"
+      },
+      {
+        "title": "Adore You",
+        "artist": "Harry Styles",
+        "youtubeId": "iquhBgM-Qv0"
+      },
+      {
+        "title": "Late Night Talking",
+        "artist": "Harry Styles",
+        "youtubeId": "RwT77rlp2CE"
+      },
+      {
+        "title": "Love Yourself",
+        "artist": "Justin Bieber",
+        "youtubeId": "WJUe3mr2gNM"
+      },
+      {
+        "title": "Stay",
+        "artist": "Rihanna ft. Mikky Ekko",
+        "youtubeId": "7aVS-6m_lDQ"
+      },
+      {
+        "title": "Someone You Loved",
+        "artist": "Lewis Capaldi",
+        "youtubeId": "xrcMgO2fgpA"
+      },
+      {
+        "title": "Before You Go",
+        "artist": "Lewis Capaldi",
+        "youtubeId": "QpljgJPFWl8"
+      },
+      {
+        "title": "All of Me",
+        "artist": "John Legend",
+        "youtubeId": "4zXUHvfoEyQ"
+      },
+      {
+        "title": "Just the Way You Are",
+        "artist": "Bruno Mars",
+        "youtubeId": "E-UJTGXof6Q"
+      }
+    ],
+    "romantic": [
+      {
+        "title": "Until I Found You",
+        "artist": "Stephen Sanchez",
+        "youtubeId": "MlThQTo6D8A"
+      },
+      {
+        "title": "All of Me",
+        "artist": "John Legend",
+        "youtubeId": "4zXUHvfoEyQ"
+      },
+      {
+        "title": "Perfect",
+        "artist": "Ed Sheeran",
+        "youtubeId": "iKzRIweSBLA"
+      },
+      {
+        "title": "Just the Way You Are",
+        "artist": "Bruno Mars",
+        "youtubeId": "E-UJTGXof6Q"
+      },
+      {
+        "title": "A Thousand Years",
+        "artist": "Christina Perri",
+        "youtubeId": "rtOvBOTyX00"
+      },
+      {
+        "title": "Thinking Out Loud",
+        "artist": "Ed Sheeran",
+        "youtubeId": "WpyfrixXBqU"
+      },
+      {
+        "title": "Love Story",
+        "artist": "Taylor Swift",
+        "youtubeId": "aXzVF3XeS8M"
+      },
+      {
+        "title": "Lover",
+        "artist": "Taylor Swift",
+        "youtubeId": "cvUAzpn48xA"
+      },
+      {
+        "title": "Enchanted",
+        "artist": "Taylor Swift",
+        "youtubeId": "Na2WnQ13zcM"
+      },
+      {
+        "title": "Adore You",
+        "artist": "Harry Styles",
+        "youtubeId": "iquhBgM-Qv0"
+      },
+      {
+        "title": "Die With A Smile",
+        "artist": "Lady Gaga & Bruno Mars",
+        "youtubeId": "PfH7jq_uSCM"
+      },
+      {
+        "title": "Say You Won't Let Go",
+        "artist": "James Arthur",
+        "youtubeId": "-tn0z4Bz1aQ"
+      },
+      {
+        "title": "Rewrite the Stars",
+        "artist": "Zac Efron & Zendaya",
+        "youtubeId": "gdjR2lvIfJ4"
+      },
+      {
+        "title": "I Won't Give Up",
+        "artist": "Jason Mraz",
+        "youtubeId": "25KyICos7yQ"
+      },
+      {
+        "title": "I'm Yours",
+        "artist": "Jason Mraz",
+        "youtubeId": "hxTopOuj01k"
+      },
+      {
+        "title": "Kiss Me",
+        "artist": "Sixpence None the Richer",
+        "youtubeId": "CAC-onWPMB0"
+      },
+      {
+        "title": "Can't Help Falling in Love",
+        "artist": "Elvis Presley",
+        "youtubeId": "vGJTaP6anOU"
+      },
+      {
+        "title": "At Last",
+        "artist": "Etta James",
+        "youtubeId": "cZag0E32is0"
+      },
+      {
+        "title": "The Way You Look Tonight",
+        "artist": "Frank Sinatra",
+        "youtubeId": "gfW398PdTGM"
+      },
+      {
+        "title": "Something",
+        "artist": "The Beatles",
+        "youtubeId": "UelDrZ1aFeY"
+      },
+      {
+        "title": "Make You Feel My Love",
+        "artist": "Adele",
+        "youtubeId": "9IzKueQ2ZxY"
+      },
+      {
+        "title": "Turning Page",
+        "artist": "Sleeping At Last",
+        "youtubeId": "M-AMu_iAcf8"
+      },
+      {
+        "title": "I Choose You",
+        "artist": "Sara Bareilles",
+        "youtubeId": "lmGkIqu-mpc"
+      },
+      {
+        "title": "You Are The Reason",
+        "artist": "Calum Scott",
+        "youtubeId": "JcC5VGOx8I8"
+      },
+      {
+        "title": "Photograph",
+        "artist": "Ed Sheeran",
+        "youtubeId": "KKQl-pIRQMY"
+      },
+      {
+        "title": "10,000 Hours",
+        "artist": "Dan + Shay & Justin Bieber",
+        "youtubeId": "rdXTZAr1zBY"
+      },
+      {
+        "title": "Speechless",
+        "artist": "Dan + Shay",
+        "youtubeId": "o_bIMTtl8X8"
+      },
+      {
+        "title": "Heaven",
+        "artist": "Bryan Adams",
+        "youtubeId": "vf3zFvcKQkw"
+      },
+      {
+        "title": "Truly Madly Deeply",
+        "artist": "Savage Garden",
+        "youtubeId": "jBVifG4_Ruk"
+      },
+      {
+        "title": "I Don't Want to Miss a Thing",
+        "artist": "Aerosmith",
+        "youtubeId": "WC6lEMYmxR8"
+      }
+    ],
+    "motivational": [
+      {
+        "title": "On Top Of The World",
+        "artist": "Imagine Dragons",
+        "youtubeId": "cxmMD5OvYRQ"
+      },
+      {
+        "title": "Hall of Fame",
+        "artist": "The Script ft. will.i.am",
+        "youtubeId": "dtgoDXEOxTM"
+      },
+      {
+        "title": "Believer",
+        "artist": "Imagine Dragons",
+        "youtubeId": "7wtfhZwyrcc"
+      },
+      {
+        "title": "Unstoppable",
+        "artist": "Sia",
+        "youtubeId": "cxjvTXo9WWM"
+      },
+      {
+        "title": "High Hopes",
+        "artist": "Panic! At The Disco",
+        "youtubeId": "n3kDc9M2kqE"
+      },
+      {
+        "title": "The Greatest",
+        "artist": "Sia",
+        "youtubeId": "sG6aWhZnbfw"
+      },
+      {
+        "title": "Stronger",
+        "artist": "Kelly Clarkson",
+        "youtubeId": "avYxiIRG4xQ"
+      },
+      {
+        "title": "Fight Song",
+        "artist": "Rachel Platten",
+        "youtubeId": "EEDzeZuawRY"
+      },
+      {
+        "title": "Roar",
+        "artist": "Katy Perry",
+        "youtubeId": "mwL1cohnHNE"
+      },
+      {
+        "title": "Firework",
+        "artist": "Katy Perry",
+        "youtubeId": "KLc5qNAzLaM"
+      },
+      {
+        "title": "Rise",
+        "artist": "The Glitch Mob",
+        "youtubeId": "fB8TyLTD7EE"
+      },
+      {
+        "title": "Whatever It Takes",
+        "artist": "Imagine Dragons",
+        "youtubeId": "rGlEZpOVjGo"
+      },
+      {
+        "title": "Thunder",
+        "artist": "Imagine Dragons",
+        "youtubeId": "4AqjqOqNrjw"
+      },
+      {
+        "title": "Warriors",
+        "artist": "Imagine Dragons",
+        "youtubeId": "wPQEeBAXou0"
+      },
+      {
+        "title": "Radioactive",
+        "artist": "Imagine Dragons",
+        "youtubeId": "w3viBe2Q0P8"
+      },
+      {
+        "title": "Demons",
+        "artist": "Imagine Dragons",
+        "youtubeId": "pvrkfb1C4tE"
+      },
+      {
+        "title": "Whatever",
+        "artist": "Oasis",
+        "youtubeId": "EHfx9LXzxpw"
+      },
+      {
+        "title": "Eye of the Tiger",
+        "artist": "Survivor",
+        "youtubeId": "XxxfQ7-aMrE"
+      },
+      {
+        "title": "Don't Stop Believin'",
+        "artist": "Journey",
+        "youtubeId": "1k8craCGpgs"
+      },
+      {
+        "title": "We Will Rock You",
+        "artist": "Queen",
+        "youtubeId": "TXGbhniTBrU"
+      },
+      {
+        "title": "Lose Yourself",
+        "artist": "Eminem",
+        "youtubeId": "Wj7lL6eDOqc"
+      },
+      {
+        "title": "Remember the Name",
+        "artist": "Fort Minor",
+        "youtubeId": "MxhYgn7oUzQ"
+      },
+      {
+        "title": "Can't Hold Us",
+        "artist": "Macklemore & Ryan Lewis",
+        "youtubeId": "VG3JsmOmDqw"
+      },
+      {
+        "title": "Good Life",
+        "artist": "OneRepublic",
+        "youtubeId": "FEoveD68H_Q"
+      },
+      {
+        "title": "I Lived",
+        "artist": "OneRepublic",
+        "youtubeId": "pKt3o7WPYdo"
+      },
+      {
+        "title": "Counting Stars",
+        "artist": "OneRepublic",
+        "youtubeId": "hT_nvWreIhg"
+      },
+      {
+        "title": "Best Day of My Life",
+        "artist": "American Authors",
+        "youtubeId": "wutzv7JjX7k"
+      },
+      {
+        "title": "The Climb",
+        "artist": "Miley Cyrus",
+        "youtubeId": "6dbuE-s-LPQ"
+      },
+      {
+        "title": "Try",
+        "artist": "P!nk",
+        "youtubeId": "pPtlSF4TlJE"
+      },
+      {
+        "title": "Ain't No Mountain High Enough",
+        "artist": "Marvin Gaye & Tammi Terrell",
+        "youtubeId": "ABfQuZqq8wg"
+      }
+    ]
+  },
+  "sad": {
+    "heartbreak": [
+      {
+        "title": "Someone Like You",
+        "artist": "Adele",
+        "youtubeId": "hLQl3WQQoQ0"
+      },
+      {
+        "title": "Someone You Loved",
+        "artist": "Lewis Capaldi",
+        "youtubeId": "xrcMgO2fgpA"
+      },
+      {
+        "title": "Let Her Go",
+        "artist": "Passenger",
+        "youtubeId": "RBumgq5yVrA"
+      },
+      {
+        "title": "When I Was Your Man",
+        "artist": "Bruno Mars",
+        "youtubeId": "1wbtvNA8GaA"
+      },
+      {
+        "title": "All I Want",
+        "artist": "Kodaline",
+        "youtubeId": "KngoH3VGT-c"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron",
+        "youtubeId": "KtlgYxa6BMU"
+      },
+      {
+        "title": "Another Love",
+        "artist": "Tom Odell",
+        "youtubeId": "L4mB0WxxhW8"
+      },
+      {
+        "title": "Dancing On My Own",
+        "artist": "Calum Scott",
+        "youtubeId": "nnQMd5ugUR8"
+      },
+      {
+        "title": "Before You Go",
+        "artist": "Lewis Capaldi",
+        "youtubeId": "QpljgJPFWl8"
+      },
+      {
+        "title": "Happier",
+        "artist": "Ed Sheeran",
+        "youtubeId": "8TpcBDJZsJA"
+      },
+      {
+        "title": "Photograph",
+        "artist": "Ed Sheeran",
+        "youtubeId": "KKQl-pIRQMY"
+      },
+      {
+        "title": "Perfect",
+        "artist": "Ed Sheeran",
+        "youtubeId": "iKzRIweSBLA"
+      },
+      {
+        "title": "Stay With Me",
+        "artist": "Sam Smith",
+        "youtubeId": "bXDSR4GggUU"
+      },
+      {
+        "title": "Too Good At Goodbyes",
+        "artist": "Sam Smith",
+        "youtubeId": "hfHmx2kGWGg"
+      },
+      {
+        "title": "I'm Not The Only One",
+        "artist": "Sam Smith",
+        "youtubeId": "mzQ8eepcJGQ"
+      },
+      {
+        "title": "Fix You",
+        "artist": "Coldplay",
+        "youtubeId": "k4V3Mo61fJM"
+      },
+      {
+        "title": "The Scientist",
+        "artist": "Coldplay",
+        "youtubeId": "RB-RcX5DS5A"
+      },
+      {
+        "title": "Everglow",
+        "artist": "Coldplay",
+        "youtubeId": "2PFE2IJhlhQ"
+      },
+      {
+        "title": "Let Me Down Slowly",
+        "artist": "Alec Benjamin",
+        "youtubeId": "YL_iwN4dlT4"
+      },
+      {
+        "title": "Water Fountain",
+        "artist": "Alec Benjamin",
+        "youtubeId": "6uFWshoWTLU"
+      },
+      {
+        "title": "Dusk Till Dawn",
+        "artist": "ZAYN ft. Sia",
+        "youtubeId": "L1d8wfi5HAQ"
+      },
+      {
+        "title": "I Don't Wanna Live Forever",
+        "artist": "ZAYN & Taylor Swift",
+        "youtubeId": "AY9blLYMKnI"
+      },
+      {
+        "title": "Back To December",
+        "artist": "Taylor Swift",
+        "youtubeId": "G8qneZIeD9Q"
+      },
+      {
+        "title": "The 1",
+        "artist": "Taylor Swift",
+        "youtubeId": "EGOX82ZdFxg"
+      },
+      {
+        "title": "exile",
+        "artist": "Taylor Swift ft. Bon Iver",
+        "youtubeId": "osdoLjUNFnA"
+      },
+      {
+        "title": "cardigan",
+        "artist": "Taylor Swift",
+        "youtubeId": "zLSUp53y-HQ"
+      },
+      {
+        "title": "traitor",
+        "artist": "Olivia Rodrigo",
+        "youtubeId": "6tsu2oeZJgo"
+      },
+      {
+        "title": "drivers license",
+        "artist": "Olivia Rodrigo",
+        "youtubeId": "2PRvp-mP_q0"
+      },
+      {
+        "title": "deja vu",
+        "artist": "Olivia Rodrigo",
+        "youtubeId": "C4hwsb1HPaU"
+      }
+    ],
+    "lonely": [
+      {
+        "title": "Lovely",
+        "artist": "Billie Eilish & Khalid",
+        "youtubeId": "wjj2upnfBI0"
+      },
+      {
+        "title": "idontwannabeyouanymore",
+        "artist": "Billie Eilish",
+        "youtubeId": "WnUR3be5Ebk"
+      },
+      {
+        "title": "when the party's over",
+        "artist": "Billie Eilish",
+        "youtubeId": "b6WNdcZpDhQ"
+      },
+      {
+        "title": "everything i wanted",
+        "artist": "Billie Eilish",
+        "youtubeId": "qCTMq7xvdXU"
+      },
+      {
+        "title": "i love you",
+        "artist": "Billie Eilish",
+        "youtubeId": "WiinVuzh4DA"
+      },
+      {
+        "title": "Another Love",
+        "artist": "Tom Odell",
+        "youtubeId": "L4mB0WxxhW8"
+      },
+      {
+        "title": "The Night We Met",
+        "artist": "Lord Huron",
+        "youtubeId": "KtlgYxa6BMU"
+      },
+      {
+        "title": "Youth",
+        "artist": "Daughter",
+        "youtubeId": "sQTjT-yNqII"
+      },
+      {
+        "title": "I Found",
+        "artist": "Amber Run",
+        "youtubeId": "1OBpw372fIU"
+      },
+      {
+        "title": "To Build A Home",
+        "artist": "The Cinematic Orchestra",
+        "youtubeId": "oUFJJNQGwhk"
+      },
+      {
+        "title": "Skinny Love",
+        "artist": "Bon Iver",
+        "youtubeId": "95FyXUHv8hk"
+      },
+      {
+        "title": "Holocene",
+        "artist": "Bon Iver",
+        "youtubeId": "MjxA25Tj1Ks"
+      },
+      {
+        "title": "Liability",
+        "artist": "Lorde",
+        "youtubeId": "BtvJaNeELic"
+      },
+      {
+        "title": "Writer In The Dark",
+        "artist": "Lorde",
+        "youtubeId": "JsWq1YfBzDc"
+      },
+      {
+        "title": "Hard Feelings/Loveless",
+        "artist": "Lorde",
+        "youtubeId": "XRNSan20Wpw"
+      },
+      {
+        "title": "SLOW DANCING IN THE DARK",
+        "artist": "Joji",
+        "youtubeId": "LUXu4aTnK7E"
+      },
+      {
+        "title": "Glimpse of Us",
+        "artist": "Joji",
+        "youtubeId": "FvOpPeKSf_4"
+      },
+      {
+        "title": "Sanctuary",
+        "artist": "Joji",
+        "youtubeId": "ZEY9UCzzbcQ"
+      },
+      {
+        "title": "Die For You",
+        "artist": "Joji",
+        "youtubeId": "d4EcEtgIB_g"
+      },
+      {
+        "title": "Like You Do",
+        "artist": "Joji",
+        "youtubeId": "HZcRKJf7rOI"
+      },
+      {
+        "title": "Call Out My Name",
+        "artist": "The Weeknd",
+        "youtubeId": "rsEne1ZiQrk"
+      },
+      {
+        "title": "Privilege",
+        "artist": "The Weeknd",
+        "youtubeId": "JcVDXHeD59c"
+      },
+      {
+        "title": "After Hours",
+        "artist": "The Weeknd",
+        "youtubeId": "ygTZZpVkmKg"
+      },
+      {
+        "title": "Until I Bleed Out",
+        "artist": "The Weeknd",
+        "youtubeId": "iv1_FOdJ5s0"
+      },
+      {
+        "title": "Save Your Tears",
+        "artist": "The Weeknd",
+        "youtubeId": "u6lihZAcy4s"
+      },
+      {
+        "title": "Lonely",
+        "artist": "Justin Bieber & benny blanco",
+        "youtubeId": "7rqOXFXxOt4"
+      },
+      {
+        "title": "Ghost",
+        "artist": "Justin Bieber",
+        "youtubeId": "KRUWn3dLoRg"
+      },
+      {
+        "title": "Anyone",
+        "artist": "Justin Bieber",
+        "youtubeId": "4cLa1c7Zzg8"
+      },
+      {
+        "title": "Hold On",
+        "artist": "Justin Bieber",
+        "youtubeId": "HKMP2Woaf2E"
+      },
+      {
+        "title": "Changes",
+        "artist": "XXXTENTACION",
+        "youtubeId": "f0bbDFRYD_A"
+      }
+    ],
+    "slow": [
+      {
+        "title": "Fix You",
+        "artist": "Coldplay",
+        "youtubeId": "k4V3Mo61fJM"
+      },
+      {
+        "title": "The Scientist",
+        "artist": "Coldplay",
+        "youtubeId": "RB-RcX5DS5A"
+      },
+      {
+        "title": "Yellow",
+        "artist": "Coldplay",
+        "youtubeId": "yKNxeF4KMsY"
+      },
+      {
+        "title": "Sparks",
+        "artist": "Coldplay",
+        "youtubeId": "Ar48yzjn1PE"
+      },
+      {
+        "title": "O",
+        "artist": "Coldplay",
+        "youtubeId": "-gA3H3clEqk"
+      },
+      {
+        "title": "All of Me",
+        "artist": "John Legend",
+        "youtubeId": "4zXUHvfoEyQ"
+      },
+      {
+        "title": "Say You Won't Let Go",
+        "artist": "James Arthur",
+        "youtubeId": "-tn0z4Bz1aQ"
+      },
+      {
+        "title": "Turning Page",
+        "artist": "Sleeping At Last",
+        "youtubeId": "M-AMu_iAcf8"
+      },
+      {
+        "title": "A Thousand Years",
+        "artist": "Christina Perri",
+        "youtubeId": "rtOvBOTyX00"
+      },
+      {
+        "title": "Make You Feel My Love",
+        "artist": "Adele",
+        "youtubeId": "9IzKueQ2ZxY"
+      },
+      {
+        "title": "Easy On Me",
+        "artist": "Adele",
+        "youtubeId": "lQMHoAs6PdY"
+      },
+      {
+        "title": "To Be Loved",
+        "artist": "Adele",
+        "youtubeId": "_dlExeOyFh4"
+      },
+      {
+        "title": "Love In The Dark",
+        "artist": "Adele",
+        "youtubeId": "-hzFTJDJGkQ"
+      },
+      {
+        "title": "Set Fire To The Rain",
+        "artist": "Adele",
+        "youtubeId": "a2giXO6eyuI"
+      },
+      {
+        "title": "Stay",
+        "artist": "Rihanna ft. Mikky Ekko",
+        "youtubeId": "7aVS-6m_lDQ"
+      },
+      {
+        "title": "Love The Way You Lie",
+        "artist": "Eminem ft. Rihanna",
+        "youtubeId": "acMtKzTbAAU"
+      },
+      {
+        "title": "Breakeven",
+        "artist": "The Script",
+        "youtubeId": "U1ZN84MqLyI"
+      },
+      {
+        "title": "The Man Who Can't Be Moved",
+        "artist": "The Script",
+        "youtubeId": "5TNDs_2Ar5g"
+      },
+      {
+        "title": "Nothing",
+        "artist": "The Script",
+        "youtubeId": "3qeOfn5UAAA"
+      },
+      {
+        "title": "For The First Time",
+        "artist": "The Script",
+        "youtubeId": "y2KbdFvUabA"
+      },
+      {
+        "title": "Jealous",
+        "artist": "Labrinth",
+        "youtubeId": "50VWOBi0VFs"
+      },
+      {
+        "title": "Bigger Than The Whole Sky",
+        "artist": "Taylor Swift",
+        "youtubeId": "l8Tps3PITx4"
+      },
+      {
+        "title": "August",
+        "artist": "Taylor Swift",
+        "youtubeId": "nn_0zPAfyo8"
+      },
+      {
+        "title": "My Tears Ricochet",
+        "artist": "Taylor Swift",
+        "youtubeId": "OWbDJFtHl3w"
+      },
+      {
+        "title": "This Is Me Trying",
+        "artist": "Taylor Swift",
+        "youtubeId": "9bdLTPNrlEg"
+      },
+      {
+        "title": "I Almost Do",
+        "artist": "Taylor Swift",
+        "youtubeId": "aZGpXk8vYno"
+      },
+      {
+        "title": "Falling",
+        "artist": "Harry Styles",
+        "youtubeId": "WcKSPyhrGWc"
+      },
+      {
+        "title": "Fine Line",
+        "artist": "Harry Styles",
+        "youtubeId": "Ojp71GGm-LQ"
+      },
+      {
+        "title": "Matilda",
+        "artist": "Harry Styles",
+        "youtubeId": "lVnzO7opqNs"
+      },
+      {
+        "title": "Little Freak",
+        "artist": "Harry Styles",
+        "youtubeId": "hJpvI3w3tDc"
+      }
+    ],
+    "lofi": [
+      {
+        "title": "Coffee",
+        "artist": "beabadoobee",
+        "youtubeId": "C6CeA6vRtW4"
+      },
+      {
+        "title": "The Perfect Pair",
+        "artist": "beabadoobee",
+        "youtubeId": "HwtEBQiuX-c"
+      },
+      {
+        "title": "Glue Song",
+        "artist": "beabadoobee",
+        "youtubeId": "9Yy4-LCOi34"
+      },
+      {
+        "title": "Sofia",
+        "artist": "Clairo",
+        "youtubeId": "L9l8zCOwEII"
+      },
+      {
+        "title": "Bags",
+        "artist": "Clairo",
+        "youtubeId": "L9HYJbe9Y18"
+      },
+      {
+        "title": "Amoeba",
+        "artist": "Clairo",
+        "youtubeId": "VR8ooa3G_5M"
+      },
+      {
+        "title": "Pretty Girl",
+        "artist": "Clairo",
+        "youtubeId": "SK3Rxo_YRgo"
+      },
+      {
+        "title": "Moon Song",
+        "artist": "Phoebe Bridgers",
+        "youtubeId": "DXqZ66XK3z8"
+      },
+      {
+        "title": "Garden Song",
+        "artist": "Phoebe Bridgers",
+        "youtubeId": "p1LqnTuQNHc"
+      },
+      {
+        "title": "Scott Street",
+        "artist": "Phoebe Bridgers",
+        "youtubeId": "W-Khe7DInxo"
+      },
+      {
+        "title": "Savior Complex",
+        "artist": "Phoebe Bridgers",
+        "youtubeId": "VJlR3pvgLQA"
+      },
+      {
+        "title": "Ketchum, ID",
+        "artist": "boygenius",
+        "youtubeId": "5vPcrIsv5rg"
+      },
+      {
+        "title": "Cool About It",
+        "artist": "boygenius",
+        "youtubeId": "G-XICfi4j3Q"
+      },
+      {
+        "title": "Not Strong Enough",
+        "artist": "boygenius",
+        "youtubeId": "rTcF-tZwlXI"
+      },
+      {
+        "title": "I Bet on Losing Dogs",
+        "artist": "Mitski",
+        "youtubeId": "XfMBdq5iFnw"
+      },
+      {
+        "title": "My Love Mine All Mine",
+        "artist": "Mitski",
+        "youtubeId": "CwGbMYLjIpQ"
+      },
+      {
+        "title": "Francis Forever",
+        "artist": "Mitski",
+        "youtubeId": "mHKTdlUyyko"
+      },
+      {
+        "title": "First Love / Late Spring",
+        "artist": "Mitski",
+        "youtubeId": "DVIaDzs1EH4"
+      },
+      {
+        "title": "Nobody",
+        "artist": "Mitski",
+        "youtubeId": "11Qj2Tpkh0U"
+      },
+      {
+        "title": "Apocalypse",
+        "artist": "Cigarettes After Sex",
+        "youtubeId": "sElE_BfQ67s"
+      },
+      {
+        "title": "Nothing's Gonna Hurt You Baby",
+        "artist": "Cigarettes After Sex",
+        "youtubeId": "QI8VrXkffcg"
+      },
+      {
+        "title": "K.",
+        "artist": "Cigarettes After Sex",
+        "youtubeId": "L4sbDxR22z4"
+      },
+      {
+        "title": "Sweet",
+        "artist": "Cigarettes After Sex",
+        "youtubeId": "pZ31pyTZdh0"
+      },
+      {
+        "title": "Heavenly",
+        "artist": "Cigarettes After Sex",
+        "youtubeId": "s1QCL9AGbO0"
+      },
+      {
+        "title": "Sunsetz",
+        "artist": "Cigarettes After Sex",
+        "youtubeId": "5-rbSNzU_b8"
+      },
+      {
+        "title": "Space Song",
+        "artist": "Beach House",
+        "youtubeId": "GAFwrXOsL68"
+      },
+      {
+        "title": "Myth",
+        "artist": "Beach House",
+        "youtubeId": "NyQ9p5S9jBk"
+      },
+      {
+        "title": "Silver Soul",
+        "artist": "Beach House",
+        "youtubeId": "0hCzhBNzIBw"
+      },
+      {
+        "title": "Fade Into You",
+        "artist": "Mazzy Star",
+        "youtubeId": "ImKY6TZEyrI"
+      },
+      {
+        "title": "Show Me How",
+        "artist": "Men I Trust",
+        "youtubeId": "cJRFMfztgBg"
+      }
+    ]
+  },
+  "angry": {
+    "gym": [
+      {
+        "title": "Believer",
+        "artist": "Imagine Dragons",
+        "youtubeId": "7wtfhZwyrcc"
+      },
+      {
+        "title": "Till I Collapse",
+        "artist": "Eminem",
+        "youtubeId": "Pi3_Zs-oRUo"
+      },
+      {
+        "title": "Lose Yourself",
+        "artist": "Eminem",
+        "youtubeId": "Wj7lL6eDOqc"
+      },
+      {
+        "title": "Remember The Name",
+        "artist": "Fort Minor",
+        "youtubeId": "MxhYgn7oUzQ"
+      },
+      {
+        "title": "Can't Hold Us",
+        "artist": "Macklemore & Ryan Lewis",
+        "youtubeId": "VG3JsmOmDqw"
+      },
+      {
+        "title": "Stronger",
+        "artist": "Kanye West",
+        "youtubeId": "3mwiO5st-us"
+      },
+      {
+        "title": "POWER",
+        "artist": "Kanye West",
+        "youtubeId": "SUtf9Ajlno4"
+      },
+      {
+        "title": "Eye of the Tiger",
+        "artist": "Survivor",
+        "youtubeId": "XxxfQ7-aMrE"
+      },
+      {
+        "title": "Warriors",
+        "artist": "Imagine Dragons",
+        "youtubeId": "wPQEeBAXou0"
+      },
+      {
+        "title": "Whatever It Takes",
+        "artist": "Imagine Dragons",
+        "youtubeId": "rGlEZpOVjGo"
+      },
+      {
+        "title": "Radioactive",
+        "artist": "Imagine Dragons",
+        "youtubeId": "w3viBe2Q0P8"
+      },
+      {
+        "title": "Thunder",
+        "artist": "Imagine Dragons",
+        "youtubeId": "4AqjqOqNrjw"
+      },
+      {
+        "title": "Natural",
+        "artist": "Imagine Dragons",
+        "youtubeId": "9BPfyhhv7-c"
+      },
+      {
+        "title": "My Songs Know What You Did in the Dark",
+        "artist": "Fall Out Boy",
+        "youtubeId": "LkIWmsP3c_s"
+      },
+      {
+        "title": "Centuries",
+        "artist": "Fall Out Boy",
+        "youtubeId": "LBr7kECsjcQ"
+      },
+      {
+        "title": "Immortals",
+        "artist": "Fall Out Boy",
+        "youtubeId": "PHn5Q7hCjxw"
+      },
+      {
+        "title": "The Phoenix",
+        "artist": "Fall Out Boy",
+        "youtubeId": "5JqY-6q-RNA"
+      },
+      {
+        "title": "Indestructible",
+        "artist": "Disturbed",
+        "youtubeId": "XAkqbATtTKA"
+      },
+      {
+        "title": "Down With the Sickness",
+        "artist": "Disturbed",
+        "youtubeId": "aEx8XyOvmnM"
+      },
+      {
+        "title": "Stronger",
+        "artist": "Kelly Clarkson",
+        "youtubeId": "avYxiIRG4xQ"
+      },
+      {
+        "title": "Unstoppable",
+        "artist": "Sia",
+        "youtubeId": "cxjvTXo9WWM"
+      },
+      {
+        "title": "The Greatest",
+        "artist": "Sia",
+        "youtubeId": "sG6aWhZnbfw"
+      },
+      {
+        "title": "Hall of Fame",
+        "artist": "The Script ft. will.i.am",
+        "youtubeId": "dtgoDXEOxTM"
+      },
+      {
+        "title": "Uprising",
+        "artist": "Muse",
+        "youtubeId": "OqPVz101nd0"
+      },
+      {
+        "title": "Hysteria",
+        "artist": "Muse",
+        "youtubeId": "bwkmNC7ZUUE"
+      },
+      {
+        "title": "Kryptonite",
+        "artist": "3 Doors Down",
+        "youtubeId": "NtBwVWWa3Ss"
+      },
+      {
+        "title": "My Demons",
+        "artist": "Starset",
+        "youtubeId": "HpCHsO6cwx8"
+      },
+      {
+        "title": "Monster",
+        "artist": "Skillet",
+        "youtubeId": "LcAwd-FVg8w"
+      },
+      {
+        "title": "Hero",
+        "artist": "Skillet",
+        "youtubeId": "5bIDvc_6XGc"
+      },
+      {
+        "title": "Courtesy Call",
+        "artist": "Thousand Foot Krutch",
+        "youtubeId": "ocpDEOXABWg"
+      }
+    ],
+    "rock": [
+      {
+        "title": "Numb",
+        "artist": "Linkin Park",
+        "youtubeId": "kXYiU_JCYtU"
+      },
+      {
+        "title": "In the End",
+        "artist": "Linkin Park",
+        "youtubeId": "gB9P0kpc1O4"
+      },
+      {
+        "title": "Crawling",
+        "artist": "Linkin Park",
+        "youtubeId": "gx-fg-dMROg"
+      },
+      {
+        "title": "Breaking the Habit",
+        "artist": "Linkin Park",
+        "youtubeId": "RwTwd5tAq1U"
+      },
+      {
+        "title": "One Step Closer",
+        "artist": "Linkin Park",
+        "youtubeId": "sKtl7-_6AjE"
+      },
+      {
+        "title": "What I've Done",
+        "artist": "Linkin Park",
+        "youtubeId": "IgCHFfDFivc"
+      },
+      {
+        "title": "Faint",
+        "artist": "Linkin Park",
+        "youtubeId": "NU61CbO9u6o"
+      },
+      {
+        "title": "Somewhere I Belong",
+        "artist": "Linkin Park",
+        "youtubeId": "GEGieUB4b3c"
+      },
+      {
+        "title": "Given Up",
+        "artist": "Linkin Park",
+        "youtubeId": "D93vYwuMeUw"
+      },
+      {
+        "title": "Bleed It Out",
+        "artist": "Linkin Park",
+        "youtubeId": "bSwzZoLCoZ0"
+      },
+      {
+        "title": "Papercut",
+        "artist": "Linkin Park",
+        "youtubeId": "2K-evRnwcSc"
+      },
+      {
+        "title": "Boulevard of Broken Dreams",
+        "artist": "Green Day",
+        "youtubeId": "hBvJyi3fbtA"
+      },
+      {
+        "title": "American Idiot",
+        "artist": "Green Day",
+        "youtubeId": "kqkGY9jsBOw"
+      },
+      {
+        "title": "21 Guns",
+        "artist": "Green Day",
+        "youtubeId": "w29aq_sgwxw"
+      },
+      {
+        "title": "Holiday",
+        "artist": "Green Day",
+        "youtubeId": "Ajxn0PKbv7I"
+      },
+      {
+        "title": "Wake Me Up When September Ends",
+        "artist": "Green Day",
+        "youtubeId": "pGhwBFYtn1s"
+      },
+      {
+        "title": "The Pretender",
+        "artist": "Foo Fighters",
+        "youtubeId": "m4OnAwaDVTE"
+      },
+      {
+        "title": "Everlong",
+        "artist": "Foo Fighters",
+        "youtubeId": "hq0rZ3IiyWw"
+      },
+      {
+        "title": "Best of You",
+        "artist": "Foo Fighters",
+        "youtubeId": "-q2zI0J9zj8"
+      },
+      {
+        "title": "Learn to Fly",
+        "artist": "Foo Fighters",
+        "youtubeId": "MOQV__Z55eE"
+      },
+      {
+        "title": "Smells Like Teen Spirit",
+        "artist": "Nirvana",
+        "youtubeId": "hTWKbfoikeg"
+      },
+      {
+        "title": "Come As You Are",
+        "artist": "Nirvana",
+        "youtubeId": "0oi1fGhaJl8"
+      },
+      {
+        "title": "Lithium",
+        "artist": "Nirvana",
+        "youtubeId": "pkcJEvMcnEg"
+      },
+      {
+        "title": "Enter Sandman",
+        "artist": "Metallica",
+        "youtubeId": "XZuM4zFg-60"
+      },
+      {
+        "title": "Nothing Else Matters",
+        "artist": "Metallica",
+        "youtubeId": "ozXZnwYTMbs"
+      },
+      {
+        "title": "Master of Puppets",
+        "artist": "Metallica",
+        "youtubeId": "E0ozmU9cJDg"
+      },
+      {
+        "title": "The Unforgiven",
+        "artist": "Metallica",
+        "youtubeId": "domjqjQ_WRI"
+      },
+      {
+        "title": "Paint It Black",
+        "artist": "The Rolling Stones",
+        "youtubeId": "EBUFtoC2oj4"
+      },
+      {
+        "title": "Seven Nation Army",
+        "artist": "The White Stripes",
+        "youtubeId": "RDuzszjrdcc"
+      },
+      {
+        "title": "Killing in the Name",
+        "artist": "Rage Against the Machine",
+        "youtubeId": "JYJ6QJqy92s"
+      }
+    ],
+    "metal": [
+      {
+        "title": "Chop Suey!",
+        "artist": "System Of A Down",
+        "youtubeId": "GK-DkHHAMIU"
+      },
+      {
+        "title": "Toxicity",
+        "artist": "System Of A Down",
+        "youtubeId": "IBPB0LP_Ulo"
+      },
+      {
+        "title": "B.Y.O.B.",
+        "artist": "System Of A Down",
+        "youtubeId": "zUzd9KyIDrM"
+      },
+      {
+        "title": "Aerials",
+        "artist": "System Of A Down",
+        "youtubeId": "zk62uUqcNyo"
+      },
+      {
+        "title": "Sugar",
+        "artist": "System Of A Down",
+        "youtubeId": "0zW_Dt-SFR8"
+      },
+      {
+        "title": "Psychosocial",
+        "artist": "Slipknot",
+        "youtubeId": "5abamRO41fE"
+      },
+      {
+        "title": "Duality",
+        "artist": "Slipknot",
+        "youtubeId": "3GWwohI5h1w"
+      },
+      {
+        "title": "Wait and Bleed",
+        "artist": "Slipknot",
+        "youtubeId": "xAUaEfzt_VU"
+      },
+      {
+        "title": "Before I Forget",
+        "artist": "Slipknot",
+        "youtubeId": "XScJKCYmVJE"
+      },
+      {
+        "title": "The Devil in I",
+        "artist": "Slipknot",
+        "youtubeId": "ONKUjAS6X3M"
+      },
+      {
+        "title": "Snuff",
+        "artist": "Slipknot",
+        "youtubeId": "aERu-n0sKbA"
+      },
+      {
+        "title": "Walk",
+        "artist": "Pantera",
+        "youtubeId": "XNjKN0_wx3s"
+      },
+      {
+        "title": "Cowboys from Hell",
+        "artist": "Pantera",
+        "youtubeId": "WYfljBCpmE4"
+      },
+      {
+        "title": "Cemetery Gates",
+        "artist": "Pantera",
+        "youtubeId": "cSZf8ZYHV7o"
+      },
+      {
+        "title": "Paranoid",
+        "artist": "Black Sabbath",
+        "youtubeId": "BOTIIw76qiE"
+      },
+      {
+        "title": "Iron Man",
+        "artist": "Black Sabbath",
+        "youtubeId": "pOfBdvuky1s"
+      },
+      {
+        "title": "War Pigs",
+        "artist": "Black Sabbath",
+        "youtubeId": "hZcLIsHdvss"
+      },
+      {
+        "title": "Master of Puppets",
+        "artist": "Metallica",
+        "youtubeId": "E0ozmU9cJDg"
+      },
+      {
+        "title": "Enter Sandman",
+        "artist": "Metallica",
+        "youtubeId": "XZuM4zFg-60"
+      },
+      {
+        "title": "For Whom the Bell Tolls",
+        "artist": "Metallica",
+        "youtubeId": "B_HSa1dEL9s"
+      },
+      {
+        "title": "One",
+        "artist": "Metallica",
+        "youtubeId": "apK2jCrfnsk"
+      },
+      {
+        "title": "Sad But True",
+        "artist": "Metallica",
+        "youtubeId": "TpohVYomw2o"
+      },
+      {
+        "title": "The Unforgiven",
+        "artist": "Metallica",
+        "youtubeId": "domjqjQ_WRI"
+      },
+      {
+        "title": "Ace of Spades",
+        "artist": "Motörhead",
+        "youtubeId": "PMavhk16FJU"
+      },
+      {
+        "title": "Raining Blood",
+        "artist": "Slayer",
+        "youtubeId": "CkaE237oiwE"
+      },
+      {
+        "title": "South of Heaven",
+        "artist": "Slayer",
+        "youtubeId": "74nTzbgDGWM"
+      },
+      {
+        "title": "Holy Wars... The Punishment Due",
+        "artist": "Megadeth",
+        "youtubeId": "J5o8Daw1ZsY"
+      },
+      {
+        "title": "Symphony of Destruction",
+        "artist": "Megadeth",
+        "youtubeId": "wEPKIulCEhQ"
+      },
+      {
+        "title": "Peace Sells",
+        "artist": "Megadeth",
+        "youtubeId": "LVhJy-CR64Q"
+      },
+      {
+        "title": "The Trooper",
+        "artist": "Iron Maiden",
+        "youtubeId": "t24ij5kI2cg"
+      }
+    ],
+    "rap": [
+      {
+        "title": "Enemy",
+        "artist": "Imagine Dragons & JID",
+        "youtubeId": "IOrbP1OqNsg"
+      },
+      {
+        "title": "Till I Collapse",
+        "artist": "Eminem",
+        "youtubeId": "Pi3_Zs-oRUo"
+      },
+      {
+        "title": "Lose Yourself",
+        "artist": "Eminem",
+        "youtubeId": "tR1ECf4sEpw"
+      },
+      {
+        "title": "Not Afraid",
+        "artist": "Eminem",
+        "youtubeId": "NMj0NnKVMwo"
+      },
+      {
+        "title": "Rap God",
+        "artist": "Eminem",
+        "youtubeId": "S7cQ3b0iqLo"
+      },
+      {
+        "title": "Without Me",
+        "artist": "Eminem",
+        "youtubeId": "pyb13N80DZQ"
+      },
+      {
+        "title": "Godzilla",
+        "artist": "Eminem ft. Juice WRLD",
+        "youtubeId": "9XvXF1LrWgA"
+      },
+      {
+        "title": "The Real Slim Shady",
+        "artist": "Eminem",
+        "youtubeId": "1-M4JrFcrNY"
+      },
+      {
+        "title": "Remember The Name",
+        "artist": "Fort Minor",
+        "youtubeId": "MxhYgn7oUzQ"
+      },
+      {
+        "title": "In The End",
+        "artist": "Linkin Park",
+        "youtubeId": "gB9P0kpc1O4"
+      },
+      {
+        "title": "SICKO MODE",
+        "artist": "Travis Scott",
+        "youtubeId": "d-JBBNg8YKs"
+      },
+      {
+        "title": "goosebumps",
+        "artist": "Travis Scott",
+        "youtubeId": "FhTtYSU7Q7g"
+      },
+      {
+        "title": "FE!N",
+        "artist": "Travis Scott ft. Playboi Carti",
+        "youtubeId": "U-l4ya3ejko"
+      },
+      {
+        "title": "HUMBLE.",
+        "artist": "Kendrick Lamar",
+        "youtubeId": "ov4WobPqoSA"
+      },
+      {
+        "title": "DNA.",
+        "artist": "Kendrick Lamar",
+        "youtubeId": "uX6uBHPGfSs"
+      },
+      {
+        "title": "m.A.A.d city",
+        "artist": "Kendrick Lamar",
+        "youtubeId": "mprkqDNUQb0"
+      },
+      {
+        "title": "Not Like Us",
+        "artist": "Kendrick Lamar",
+        "youtubeId": "T6eK-2OQtew"
+      },
+      {
+        "title": "God's Plan",
+        "artist": "Drake",
+        "youtubeId": "m1a_GqJf02M"
+      },
+      {
+        "title": "Nonstop",
+        "artist": "Drake",
+        "youtubeId": "QVqS3tB8OtE"
+      },
+      {
+        "title": "Started From the Bottom",
+        "artist": "Drake",
+        "youtubeId": "-D6USHQMFDE"
+      },
+      {
+        "title": "Look At Me!",
+        "artist": "XXXTENTACION",
+        "youtubeId": "wJGcwEv7838"
+      },
+      {
+        "title": "Ransom",
+        "artist": "Lil Tecca",
+        "youtubeId": "XLofd-v_Bas"
+      },
+      {
+        "title": "Praise The Lord",
+        "artist": "A$AP Rocky",
+        "youtubeId": "_eDpH4hMW1o"
+      },
+      {
+        "title": "No Role Modelz",
+        "artist": "J. Cole",
+        "youtubeId": "rw2sXAIi-kQ"
+      },
+      {
+        "title": "Middle Child",
+        "artist": "J. Cole",
+        "youtubeId": "e8CLsYzE5wk"
+      },
+      {
+        "title": "POWER",
+        "artist": "Kanye West",
+        "youtubeId": "SUtf9Ajlno4"
+      },
+      {
+        "title": "Stronger",
+        "artist": "Kanye West",
+        "youtubeId": "3mwiO5st-us"
+      },
+      {
+        "title": "Black Skinhead",
+        "artist": "Kanye West",
+        "youtubeId": "R4xrLKb6oFI"
+      },
+      {
+        "title": "Can't Tell Me Nothing",
+        "artist": "Kanye West",
+        "youtubeId": "hqvcww4ydh8"
+      },
+      {
+        "title": "X Gon' Give It To Ya",
+        "artist": "DMX",
+        "youtubeId": "vkOJ9uNj9EY"
+      }
+    ]
+  },
+  "surprise": {
+    "energetic": [
+      {
+        "title": "On Top Of The World",
+        "artist": "Imagine Dragons",
+        "youtubeId": "cxmMD5OvYRQ"
+      },
+      {
+        "title": "Counting Stars",
+        "artist": "OneRepublic",
+        "youtubeId": "hT_nvWreIhg"
+      },
+      {
+        "title": "Adventure Of A Lifetime",
+        "artist": "Coldplay",
+        "youtubeId": "hZPXL9TB68Q"
+      },
+      {
+        "title": "Can't Stop the Feeling!",
+        "artist": "Justin Timberlake",
+        "youtubeId": "KbyPok-3dio"
+      },
+      {
+        "title": "Uptown Funk",
+        "artist": "Mark Ronson ft. Bruno Mars",
+        "youtubeId": "7Ya2U8XN_Zw"
+      },
+      {
+        "title": "Don't Start Now",
+        "artist": "Dua Lipa",
+        "youtubeId": "xjiYBGs0TUA"
+      },
+      {
+        "title": "Levitating",
+        "artist": "Dua Lipa",
+        "youtubeId": "WHuBW3qKm9g"
+      },
+      {
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "youtubeId": "fHI8X4OXluQ"
+      },
+      {
+        "title": "Wake Me Up",
+        "artist": "Avicii",
+        "youtubeId": "5y_KJAg8bHI"
+      },
+      {
+        "title": "Levels",
+        "artist": "Avicii",
+        "youtubeId": "wDuoOapZ9Z0"
+      },
+      {
+        "title": "The Nights",
+        "artist": "Avicii",
+        "youtubeId": "XmIgg9De9hY"
+      },
+      {
+        "title": "I Gotta Feeling",
+        "artist": "The Black Eyed Peas",
+        "youtubeId": "CwdrtwZiQ9E"
+      },
+      {
+        "title": "Party Rock Anthem",
+        "artist": "LMFAO",
+        "youtubeId": "zIh5AHxh-Ok"
+      },
+      {
+        "title": "Firework",
+        "artist": "Katy Perry",
+        "youtubeId": "KLc5qNAzLaM"
+      },
+      {
+        "title": "Roar",
+        "artist": "Katy Perry",
+        "youtubeId": "oT73UO5nQXM"
+      },
+      {
+        "title": "Shut Up and Dance",
+        "artist": "WALK THE MOON",
+        "youtubeId": "nbcCG7PkI18"
+      },
+      {
+        "title": "Sugar",
+        "artist": "Maroon 5",
+        "youtubeId": "GhH4rTap48M"
+      },
+      {
+        "title": "Moves Like Jagger",
+        "artist": "Maroon 5",
+        "youtubeId": "suRsxpoAc5w"
+      },
+      {
+        "title": "Treasure",
+        "artist": "Bruno Mars",
+        "youtubeId": "U32IDVY5vsw"
+      },
+      {
+        "title": "24K Magic",
+        "artist": "Bruno Mars",
+        "youtubeId": "f9imDgsjxXc"
+      },
+      {
+        "title": "Good Time",
+        "artist": "Owl City & Carly Rae Jepsen",
+        "youtubeId": "MpfSEZLuWxY"
+      },
+      {
+        "title": "Best Day Of My Life",
+        "artist": "American Authors",
+        "youtubeId": "wutzv7JjX7k"
+      },
+      {
+        "title": "Walking On Sunshine",
+        "artist": "Katrina & The Waves",
+        "youtubeId": "rmdiaQM43bk"
+      },
+      {
+        "title": "Happy",
+        "artist": "Pharrell Williams",
+        "youtubeId": "4m-_cqRsoqA"
+      },
+      {
+        "title": "Dynamite",
+        "artist": "Taio Cruz",
+        "youtubeId": "2JUNnKmZhqA"
+      },
+      {
+        "title": "Rather Be",
+        "artist": "Clean Bandit",
+        "youtubeId": "jUjDcqdvCrk"
+      },
+      {
+        "title": "This Is What You Came For",
+        "artist": "Calvin Harris ft. Rihanna",
+        "youtubeId": "kOkQ4T5WO9E"
+      },
+      {
+        "title": "One Kiss",
+        "artist": "Calvin Harris & Dua Lipa",
+        "youtubeId": "oCab3KiXveY"
+      },
+      {
+        "title": "Don't You Worry Child",
+        "artist": "Swedish House Mafia",
+        "youtubeId": "3mWbRB3Y4R8"
+      },
+      {
+        "title": "Titanium",
+        "artist": "David Guetta ft. Sia",
+        "youtubeId": "Rohq0D72X3Q"
+      }
+    ],
+    "party": [
+      {
+        "title": "Party In The U.S.A.",
+        "artist": "Miley Cyrus",
+        "youtubeId": "-AJVcPpGuig"
+      },
+      {
+        "title": "Yeah!",
+        "artist": "Usher ft. Lil Jon & Ludacris",
+        "youtubeId": "GxBSyx85Kp8"
+      },
+      {
+        "title": "DJ Got Us Fallin' In Love",
+        "artist": "Usher ft. Pitbull",
+        "youtubeId": "C-dvTjK_07c"
+      },
+      {
+        "title": "Give Me Everything",
+        "artist": "Pitbull ft. Ne-Yo",
+        "youtubeId": "VLGbfEf7o7c"
+      },
+      {
+        "title": "Timber",
+        "artist": "Pitbull ft. Kesha",
+        "youtubeId": "hHUbLv4ThOo"
+      },
+      {
+        "title": "On The Floor",
+        "artist": "Jennifer Lopez ft. Pitbull",
+        "youtubeId": "9lybsz-7TFM"
+      },
+      {
+        "title": "Starships",
+        "artist": "Nicki Minaj",
+        "youtubeId": "ib5vOL3Ka2s"
+      },
+      {
+        "title": "Turn Down for What",
+        "artist": "DJ Snake & Lil Jon",
+        "youtubeId": "QFy0hQ3lY-w"
+      },
+      {
+        "title": "Get Lucky",
+        "artist": "Daft Punk ft. Pharrell Williams",
+        "youtubeId": "5NV6Rdv1a3I"
+      },
+      {
+        "title": "Don't Stop the Music",
+        "artist": "Rihanna",
+        "youtubeId": "yd8jh9QYfEs"
+      },
+      {
+        "title": "Only Girl (In The World)",
+        "artist": "Rihanna",
+        "youtubeId": "-ySWIyJj3I0"
+      },
+      {
+        "title": "We Found Love",
+        "artist": "Rihanna ft. Calvin Harris",
+        "youtubeId": "GchEVSx9XEA"
+      },
+      {
+        "title": "Where Have You Been",
+        "artist": "Rihanna",
+        "youtubeId": "H-0OuRVCAK8"
+      },
+      {
+        "title": "Work",
+        "artist": "Rihanna ft. Drake",
+        "youtubeId": "qDP_HuBaQfs"
+      },
+      {
+        "title": "Problem",
+        "artist": "Ariana Grande ft. Iggy Azalea",
+        "youtubeId": "iS1g8G_njx8"
+      },
+      {
+        "title": "Bang Bang",
+        "artist": "Jessie J, Ariana Grande & Nicki Minaj",
+        "youtubeId": "YswhUHH6Ufc"
+      },
+      {
+        "title": "Break Free",
+        "artist": "Ariana Grande ft. Zedd",
+        "youtubeId": "2Ek3WMM7I-0"
+      },
+      {
+        "title": "Into You",
+        "artist": "Ariana Grande",
+        "youtubeId": "GB2aPHTDaqU"
+      },
+      {
+        "title": "Rain On Me",
+        "artist": "Lady Gaga & Ariana Grande",
+        "youtubeId": "ugQhauUEcJM"
+      },
+      {
+        "title": "Just Dance",
+        "artist": "Lady Gaga",
+        "youtubeId": "5q7byFPTehs"
+      },
+      {
+        "title": "Poker Face",
+        "artist": "Lady Gaga",
+        "youtubeId": "s1A3X_VA-us"
+      },
+      {
+        "title": "Bad Romance",
+        "artist": "Lady Gaga",
+        "youtubeId": "52QarK_LoHE"
+      },
+      {
+        "title": "Havana",
+        "artist": "Camila Cabello",
+        "youtubeId": "HCjNJDNzw8Y"
+      },
+      {
+        "title": "Señorita",
+        "artist": "Shawn Mendes & Camila Cabello",
+        "youtubeId": "GUNIrPe707s"
+      },
+      {
+        "title": "Dance Monkey",
+        "artist": "Tones and I",
+        "youtubeId": "0Yy9YzdmTJA"
+      },
+      {
+        "title": "Cheap Thrills",
+        "artist": "Sia",
+        "youtubeId": "J1b22l1kFKY"
+      },
+      {
+        "title": "Waka Waka",
+        "artist": "Shakira",
+        "youtubeId": "czWcyZRAMtk"
+      },
+      {
+        "title": "Hips Don't Lie",
+        "artist": "Shakira ft. Wyclef Jean",
+        "youtubeId": "DUT5rEU6pqM"
+      },
+      {
+        "title": "Cake By The Ocean",
+        "artist": "DNCE",
+        "youtubeId": "UfM-nM762ec"
+      },
+      {
+        "title": "Cake By The Ocean",
+        "artist": "DNCE",
+        "youtubeId": "UfM-nM762ec"
+      }
+    ],
+    "adventure": [
+      {
+        "title": "Adventure Of A Lifetime",
+        "artist": "Coldplay",
+        "youtubeId": "hZPXL9TB68Q"
+      },
+      {
+        "title": "On Top Of The World",
+        "artist": "Imagine Dragons",
+        "youtubeId": "cxmMD5OvYRQ"
+      },
+      {
+        "title": "The Nights",
+        "artist": "Avicii",
+        "youtubeId": "XmIgg9De9hY"
+      },
+      {
+        "title": "Wake Me Up",
+        "artist": "Avicii",
+        "youtubeId": "5y_KJAg8bHI"
+      },
+      {
+        "title": "A Sky Full of Stars",
+        "artist": "Coldplay",
+        "youtubeId": "zp7NtW_hKJI"
+      },
+      {
+        "title": "Paradise",
+        "artist": "Coldplay",
+        "youtubeId": "J6ZWlDks0nQ"
+      },
+      {
+        "title": "Viva La Vida",
+        "artist": "Coldplay",
+        "youtubeId": "dvgZkm1xWPE"
+      },
+      {
+        "title": "Send Me On My Way",
+        "artist": "Rusted Root",
+        "youtubeId": "rwHv2XlIC_w"
+      },
+      {
+        "title": "Home",
+        "artist": "Edward Sharpe & The Magnetic Zeros",
+        "youtubeId": "-zpEMkKJd0M"
+      },
+      {
+        "title": "Mountain Sound",
+        "artist": "Of Monsters and Men",
+        "youtubeId": "qt7ox1M_XG4"
+      },
+      {
+        "title": "Little Talks",
+        "artist": "Of Monsters and Men",
+        "youtubeId": "IY8rOSyR5Rw"
+      },
+      {
+        "title": "Riptide",
+        "artist": "Vance Joy",
+        "youtubeId": "TL_oroU9eN8"
+      },
+      {
+        "title": "Ho Hey",
+        "artist": "The Lumineers",
+        "youtubeId": "zvCBSSwgtg4"
+      },
+      {
+        "title": "Ophelia",
+        "artist": "The Lumineers",
+        "youtubeId": "pTOC_q0NLTk"
+      },
+      {
+        "title": "Geronimo",
+        "artist": "Sheppard",
+        "youtubeId": "E-SeaCZE2TM"
+      },
+      {
+        "title": "Shotgun",
+        "artist": "George Ezra",
+        "youtubeId": "v_B3qkp4nO4"
+      },
+      {
+        "title": "Budapest",
+        "artist": "George Ezra",
+        "youtubeId": "XyGSQjyaoDA"
+      },
+      {
+        "title": "Walking On A Dream",
+        "artist": "Empire of the Sun",
+        "youtubeId": "eimgRedLkkU"
+      },
+      {
+        "title": "Safe And Sound",
+        "artist": "Capital Cities",
+        "youtubeId": "mQmOZX-8EZI"
+      },
+      {
+        "title": "Sweet Disposition",
+        "artist": "The Temper Trap",
+        "youtubeId": "0Us2amaAcIQ"
+      },
+      {
+        "title": "Good Life",
+        "artist": "OneRepublic",
+        "youtubeId": "FEoveD68H_Q"
+      },
+      {
+        "title": "I Lived",
+        "artist": "OneRepublic",
+        "youtubeId": "pKt3o7WPYdo"
+      },
+      {
+        "title": "Counting Stars",
+        "artist": "OneRepublic",
+        "youtubeId": "hT_nvWreIhg"
+      },
+      {
+        "title": "Renegades",
+        "artist": "X Ambassadors",
+        "youtubeId": "6tu4wWSbnIs"
+      },
+      {
+        "title": "Mountain",
+        "artist": "Of Monsters and Men",
+        "youtubeId": "qt7ox1M_XG4"
+      },
+      {
+        "title": "Pompeii",
+        "artist": "Bastille",
+        "youtubeId": "ilLEuwH4hws"
+      },
+      {
+        "title": "Best Day Of My Life",
+        "artist": "American Authors",
+        "youtubeId": "wutzv7JjX7k"
+      },
+      {
+        "title": "Castle on the Hill",
+        "artist": "Ed Sheeran",
+        "youtubeId": "7Qp5vcuMIlk"
+      },
+      {
+        "title": "Beautiful Day",
+        "artist": "U2",
+        "youtubeId": "vCqlrhnl68g"
+      },
+      {
+        "title": "Born to Be Wild",
+        "artist": "Steppenwolf",
+        "youtubeId": "igvP806798U"
+      }
+    ],
+    "feel_good": [
+      {
+        "title": "Happy",
+        "artist": "Pharrell Williams",
+        "youtubeId": "4m-_cqRsoqA"
+      },
+      {
+        "title": "Good as Hell",
+        "artist": "Lizzo",
+        "youtubeId": "SmbmeOgWsqE"
+      },
+      {
+        "title": "About Damn Time",
+        "artist": "Lizzo",
+        "youtubeId": "tRQe3HjZEzw"
+      },
+      {
+        "title": "Lovely Day",
+        "artist": "Bill Withers",
+        "youtubeId": "bEeaS6fuUoA"
+      },
+      {
+        "title": "Walking On Sunshine",
+        "artist": "Katrina & The Waves",
+        "youtubeId": "rmdiaQM43bk"
+      },
+      {
+        "title": "Three Little Birds",
+        "artist": "Bob Marley & The Wailers",
+        "youtubeId": "HNBCVM4KbUM"
+      },
+      {
+        "title": "Here Comes the Sun",
+        "artist": "The Beatles",
+        "youtubeId": "GKdl-GCsNJ0"
+      },
+      {
+        "title": "Good Vibrations",
+        "artist": "The Beach Boys",
+        "youtubeId": "jkPyB-g3asI"
+      },
+      {
+        "title": "Dancing Queen",
+        "artist": "ABBA",
+        "youtubeId": "-sVB91NTa4A"
+      },
+      {
+        "title": "Mamma Mia",
+        "artist": "ABBA",
+        "youtubeId": "U4Sm7v6PDY8"
+      },
+      {
+        "title": "September",
+        "artist": "Earth, Wind & Fire",
+        "youtubeId": "3cKtSlsYVEU"
+      },
+      {
+        "title": "Signed, Sealed, Delivered",
+        "artist": "Stevie Wonder",
+        "youtubeId": "6To0fvX_wFA"
+      },
+      {
+        "title": "Sir Duke",
+        "artist": "Stevie Wonder",
+        "youtubeId": "6sIjSNTS7Fs"
+      },
+      {
+        "title": "Isn't She Lovely",
+        "artist": "Stevie Wonder",
+        "youtubeId": "oE56g61mW44"
+      },
+      {
+        "title": "Lovely Day",
+        "artist": "Bill Withers",
+        "youtubeId": "bEeaS6fuUoA"
+      },
+      {
+        "title": "Put Your Records On",
+        "artist": "Corinne Bailey Rae",
+        "youtubeId": "rjOhZZyn30k"
+      },
+      {
+        "title": "Sunday Morning",
+        "artist": "Maroon 5",
+        "youtubeId": "to5Sg2KeEnU"
+      },
+      {
+        "title": "Count on Me",
+        "artist": "Bruno Mars",
+        "youtubeId": "6k8cpUkKK4c"
+      },
+      {
+        "title": "Just the Way You Are",
+        "artist": "Bruno Mars",
+        "youtubeId": "E-UJTGXof6Q"
+      },
+      {
+        "title": "Treasure",
+        "artist": "Bruno Mars",
+        "youtubeId": "U32IDVY5vsw"
+      },
+      {
+        "title": "Good Time",
+        "artist": "Owl City & Carly Rae Jepsen",
+        "youtubeId": "MpfSEZLuWxY"
+      },
+      {
+        "title": "Best Day Of My Life",
+        "artist": "American Authors",
+        "youtubeId": "wutzv7JjX7k"
+      },
+      {
+        "title": "Shake It Off",
+        "artist": "Taylor Swift",
+        "youtubeId": "H59xVMF4zxE"
+      },
+      {
+        "title": "22",
+        "artist": "Taylor Swift",
+        "youtubeId": "AgFeZr5ptV8"
+      },
+      {
+        "title": "Cruel Summer",
+        "artist": "Taylor Swift",
+        "youtubeId": "ic8j13piAhQ"
+      },
+      {
+        "title": "Watermelon Sugar",
+        "artist": "Harry Styles",
+        "youtubeId": "7-x3uD5z1bQ"
+      },
+      {
+        "title": "As It Was",
+        "artist": "Harry Styles",
+        "youtubeId": "V1Z586zoeeE"
+      },
+      {
+        "title": "Adore You",
+        "artist": "Harry Styles",
+        "youtubeId": "iquhBgM-Qv0"
+      },
+      {
+        "title": "Golden",
+        "artist": "Harry Styles",
+        "youtubeId": "enuYFtMHgfU"
+      },
+      {
+        "title": "Can't Stop the Feeling!",
+        "artist": "Justin Timberlake",
+        "youtubeId": "KbyPok-3dio"
+      }
+    ]
+  }
 }
