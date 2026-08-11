@@ -2,7 +2,6 @@ import Webcam from "react-webcam";
 import { useEffect, useRef, useState } from "react";
 import {
   Camera,
-  BrainCircuit,
   Loader2,
   Radio,
 } from "lucide-react";
@@ -13,10 +12,16 @@ import { detectEmotion } from "../../services/emotion";
 interface Prediction {
   emotion: string;
   confidence: number;
+
+  categories?: string[];
+
   songs: {
     title: string;
     artist: string;
-    youtube: string;
+    youtube?: string;
+    youtubeId?: string;
+    emotion?: string;
+    category?: string;
   }[];
 }
 
