@@ -91,15 +91,7 @@ export default function Register() {
             className="hidden lg:block"
           >
 
-            <div className="inline-flex items-center gap-2 rounded-lg border border-violet-500/20 bg-white/5 px-4 py-2 backdrop-blur-xl">
-
-              
-
-              <span className="text-sm text-slate-300">
-                Welcome to EMOFI
-              </span>
-
-            </div>
+            
 
             <h1 className="mt-8 text-6xl font-black leading-tight">
 
@@ -113,14 +105,7 @@ export default function Register() {
 
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400">
-
-              Create your account to access
-              AI-powered emotion detection,
-              personalized music recommendations,
-              analytics and much more.
-
-            </p>
+            
                         <div className="mt-12 space-y-6">
 
               {[
@@ -225,11 +210,7 @@ export default function Register() {
 
             </h2>
 
-            <p className="mt-2 text-slate-400">
-
-              Start your AI-powered emotional journey.
-
-            </p>
+            
 
             <form
               onSubmit={handleSubmit}
