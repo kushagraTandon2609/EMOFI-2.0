@@ -14,8 +14,13 @@ class Config:
         f"{os.getenv('DB_HOST')}:"
         f"{os.getenv('DB_PORT')}/"
         f"{os.getenv('DB_NAME')}"
-        "?ssl_verify_cert=false"
     )
+
+    SQLALCHEMY_ENGINE_OPTIONS = {
+        "connect_args": {
+            "ssl": {}
+        }
+    }
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
