@@ -17,6 +17,18 @@ class Config:
     )
 
     SQLALCHEMY_ENGINE_OPTIONS = {
+        # Check whether a pooled connection is still alive
+        # before using it.
+        "pool_pre_ping": True,
+
+        # Recycle old connections before they become stale.
+        # 1800 seconds = 30 minutes.
+        "pool_recycle": 1800,
+
+        # Keep the pool small for Render's deployment.
+        "pool_size": 5,
+        "max_overflow": 2,
+
         "connect_args": {
             "ssl": {}
         }
