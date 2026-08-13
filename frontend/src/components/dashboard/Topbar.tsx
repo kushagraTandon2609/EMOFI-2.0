@@ -228,7 +228,7 @@ export default function Topbar() {
               <button
               onClick={() => {
                   
-                  window.location.href = "/Profile";
+                  window.location.href = "/profile";
                 }}
                 className="
                 flex
