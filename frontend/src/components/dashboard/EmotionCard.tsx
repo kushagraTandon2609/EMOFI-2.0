@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
   BrainCircuit,
-  Activity,
   CheckCircle2,
 } from "lucide-react";
 
