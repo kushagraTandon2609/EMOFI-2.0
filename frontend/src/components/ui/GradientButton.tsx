@@ -1,10 +1,9 @@
-import type { ButtonHTMLAttributes } from "react";
 import { motion } from "framer-motion";
 
-interface GradientButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
+type GradientButtonProps = React.ComponentProps<typeof motion.button> & {
   children: React.ReactNode;
-}
+  className?: string;
+};
 
 export default function GradientButton({
   children,
