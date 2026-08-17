@@ -84,6 +84,13 @@ The application also stores user activity and mood history, allowing users to ex
 - Protected API requests
 - User profile
 
+### RUN PROJECT
+frontend - cd frontend
+            npm run dev
+backend - cs backend
+          venv/scripts/activate
+          python app.py
+
 ---
 
 # 🧠 How EMOFI Works
